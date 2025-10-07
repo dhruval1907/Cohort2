@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    padding: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#nav-part1 {
+    /* width: 40vw; */
+    width: 40%;
+    display: flex;
+    gap: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 0.9vw;
+    font-weight: 600;
+}
+
+#nav-part2 a{
+    font-weight: 400 !important;
+}
+
+#nav-part2 {
+     width: 19%;
+     font-weight: 500;
+}
+
+#nav-part2 a{
+    font-family: serif;
+    font-size: 1.2vw;
+}
+
+
+#nav-part3 {
+    /* width: 30vw; */
+    width: 25%;
+    display: flex;
+    gap: 50px;
+    display: flex;
+    justify-content: end;
+}
+
+#middtext{
+    width: 100%;
+    height: 35vh;
+}
+
+#middtext h1{
+    font-size: 18vw;
+    padding: 0vw 4vw;
+    font-weight: 500;
+    letter-spacing: 1vw;
+}
+
+#middldowntext{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#middle1{
+    width: 40% ;
+    height: 100%;
+}
+
+#middle1{
+    padding: 2vw;
+    padding-top: 5vw;
+}
+
+#middle1 h1{
+    font-size: 1vw;
+}
+
+#middle1 p{
+    width: 45%;
+    font-weight:500;
+    font-size: 0.9vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#middle2{
+    margin-top: 4vw;
+    font-weight:500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#imge-part{
+    width: 40%;
+    /* background-color: red; */
+    position: relative;
+}
+
+#imge-part img{
+    width: 25vh;
+    height: 35vh;
+}
+.img2{
+    width: 20vh !important;
+    height: 30vh !important;
+    position: absolute;
+    top: 20vh;
+    left: 12vw;
+}
+
+
+.img3{
+    width: 30vh !important;
+    height: 40vh !important;
+    position: absolute;
+    top: -13vh;
+    left: 17vw;
+}
+
+#footer{
+    padding: 5vw;
+}
+
+#footer1 h4{
+    font-family: cursive !important;
+    font-size: 1.5vw;
+    letter-spacing: 0.3vw;
+    font-style: italic;
+    position: absolute;
+    bottom: 5vh;
+    left: 5vh;
+}

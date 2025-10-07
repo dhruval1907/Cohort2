@@ -1,0 +1,78 @@
+@font-face {
+    font-family: lele;
+    src: url(./image/times.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lele;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    background: linear-gradient(to right, #93afb8, #bdbbb4, #F8E2D0);
+    width: 100%;
+}
+
+nav {
+    padding: 5vh;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    /* font-family:'Courier New', Courier, monospace; */
+    display: flex;
+    gap: 30px;
+
+}
+
+#nav-part1 {
+    width: 30vw;
+    display: flex;
+    position: absolute;
+    top: 48%;
+    gap: 2vw;
+    left: 40%;
+}
+
+#middle-part {
+    height: 74vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+}
+
+#image-effect img {
+    background: transparent;
+    position: absolute;
+    top: 5% !important;
+    left: 35%;
+    height: 90%;
+}
+
+#text1 {
+    top: 30% !important;
+}
+
+#footer {
+    height: 13.6vh;
+    width: 100vw;
+    /* background-color: red; */
+    background-image: url(./image/footer.png);
+    background-size: cover;
+}
+
+#text-effect i{
+    font-size: 30px;
+}

@@ -1,0 +1,74 @@
+@font-face {
+    font-family: lele;
+    src: url(./images/fonts/SFPRODISPLAYREGULAR.OTF);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lele;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+}
+
+nav{
+    padding: 3vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+}
+
+nav i{
+    cursor: pointer;
+}
+
+#mid-img{
+    height: 70vh;
+    width: 100%;
+}
+
+#mid-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#mid-lowe-prt{
+    height: 30vh;
+    background-color: black;
+    width: 100%;
+}
+
+#low-part{
+    height: 30vh;
+    width: 100%;
+    background-image: url(./images/iph9one.png);
+}
+
+#page1{
+    height: 70vh;
+    width: 100%;
+}
+
+#page1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
