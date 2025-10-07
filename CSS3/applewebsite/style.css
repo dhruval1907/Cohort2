@@ -3,24 +3,25 @@
     src: url(./images/fonts/SFPRODISPLAYREGULAR.OTF);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: lele;
 }
 
-html,body{
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
-#main{
+#main {
     height: 100vh;
     width: 100%;
 }
 
-nav{
+nav {
     padding: 3vh;
     /* background-color: red; */
     display: flex;
@@ -29,46 +30,126 @@ nav{
     gap: 30px;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     font-weight: 400;
     color: black;
 }
 
-nav i{
+nav i {
     cursor: pointer;
 }
 
-#mid-img{
+#mid-img {
     height: 70vh;
     width: 100%;
 }
 
-#mid-img img{
+#mid-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-#mid-lowe-prt{
+#mid-lowe-prt {
     height: 30vh;
     background-color: black;
     width: 100%;
 }
 
-#low-part{
+#low-part {
     height: 30vh;
     width: 100%;
     background-image: url(./images/iph9one.png);
 }
 
-#page1{
+#page1 {
     height: 70vh;
     width: 100%;
+    border: 10px solid white;
+
 }
 
-#page1 img{
+#page1 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+#page2 {
+    height: 60%;
+    width: 100%;
+    /* background-color: red; */
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#page2-part1 {
+    height: 100%;
+    width: 50%;
+    background-color: #F5F5F7;
+    border: 5px solid white;
+}
+
+#page2-part2 {
+    height: 100%;
+    border: 5px solid white;
+    width: 50%;
+    background-color: #F5F5F7;
+    /* background-color: red; */
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+#btn1 {
+    background-color: #0071E3;
+    padding: 0.7vw 1.5vw;
+    font-size: 1vw;
+    color: white;
+    font-size: 14px;
+    border-radius: 50px;
+    border: none;
+}
+
+#btn1:hover {
+}
+
+#btn2 {
+    background-color: white;
+    padding: 0.7vw 1.3vw;
+    font-size: 0.8vw;
+    color: #0071E3;
+    border: 1px solid #0071E3;
+    border-radius: 50px;
+    transition: all ease 0.2s;
+}
+
+#btn2:hover {
+    background-color:#0071E3;
+    border: none;
+    color: white;
+}
+
+.image-part{
+    height: 85%;
+    width: 100%;
+}
+
+.image-part img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.image-part2{
+    height: 80%;
+    width: 100%;
+}
+
+.image-part2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
 }
