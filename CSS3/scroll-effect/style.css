@@ -1,0 +1,266 @@
+@font-face {
+  font-family: lele;
+  src: url(./Poppins-Medium.ttf);
+}
+
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: monospace; */
+}
+
+/* HTML & Body Setup */
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+#main {
+  min-height: 100%;
+  width: 100%;
+  background-color: black;
+  background: linear-gradient(transparent, grey, black);
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6vw;
+  padding-top: 20px;
+  background: url(https://imgs.search.brave.com/xA_jl6NDISNMeUvGMTuiucBTmaXZuqhIVNHt9pYfSxQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YTAuZ2lwaHkuY29t/L21lZGlhL3YxLlky/bGtQVGM1TUdJM05q/RXhOblZzTTNWbFlu/VXpaM0IzTjI4d2JY/Vm5OR1E1WjNZM05t/RjBOV013TldKMmEz/ZzFkbnBuY1NabGNE/MTJNVjlwYm5SbGNt/NWhiRjluYVdaZllu/bGZhV1FtWTNROVp3/LzNvcm5qSWhaR0ZX/cGJjR01BVS9naXBo/eS5naWY.gif);
+  font-weight: 800;
+  background-clip: text;
+  font-family: lele;
+  color: transparent;
+}
+
+.card {
+  height: 400px;
+  overflow: auto;
+  width: 80%;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  justify-content: space-around;
+  padding: 0 50px;
+}
+
+.movie1 {
+  height: 98%;
+  width: 300px;
+  /* background-color: blue; */
+  border-radius: 10px;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.movie1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.box {
+  height: 100px;
+  width: 100%;
+  /* background-color: red; */
+  position: absolute;
+  background: linear-gradient(transparent, white);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  display: flex;
+}
+
+.box h4 {
+  color: white;
+  font-size: 20px;
+  font-family: lele;
+}
+
+.box i {
+  font-size: 20px;
+}
+
+.movie1:hover .box {
+  transform: translateY(-100%);
+}
+
+
+.movie3:hover .box {
+  transform: translateY(-100%);
+}
+
+
+.movie2:hover .box {
+  transform: translateY(-100%);
+}
+
+.card::-webkit-scrollbar {
+  /* display: none; */
+  height: 10px;
+  background-color: grey;
+  width: 30px !important;
+  margin-top: 100px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.movie2 {
+  height: 98%;
+  width: 300px;
+  /* background-color: blue; */
+  border-radius: 10px;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+
+.movie2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.card2 {
+  margin-top: 100px;
+  height: 400px;
+  overflow: auto;
+  width: 80%;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  justify-content: space-around;
+  padding: 0 50px;
+}
+
+
+.card2::-webkit-scrollbar {
+  /* display: none; */
+  height: 8px;
+  background-color: lightseagreen;
+  width: 30px !important;
+  margin-top: 100px;
+  border-radius: 50%;
+}
+
+.card2::-webkit-scrollbar-thumb {
+  background-color:aqua;
+  border-radius: 100px;
+}
+
+
+.movie3 {
+  height: 98%;
+  width: 300px;
+  /* background-color: blue; */
+  border-radius: 10px;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+
+.card3 {
+  margin-top: 100px;
+  height: 400px;
+  overflow: auto;
+  width: 80%;
+  background-color: red;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  justify-content: space-around;
+  padding: 0 50px;
+}
+
+
+.movie3 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+.card3::-webkit-scrollbar {
+  /* display: none; */
+  height: 8px;
+  background-color: grey;
+  width: 30px !important;
+  margin-top: 100px;
+}
+
+.card3::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+
+/* 
+.card {
+  height: 400px;
+  overflow: auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  justify-content: space-around;
+  padding: 0 50px;
+}
+
+.movie1 {
+  height: 98%;
+  width: 300px;
+  border-radius: 10px;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.movie1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.box {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(transparent, white);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  display: flex;
+}
+
+.box h4 {
+  color: white;
+  font-size: 20px;
+  font-family: lele;
+}
+
+.box i {
+  font-size: 20px;
+}
+
+.movie1:hover .box {
+  transform: translateY(-100%);
+} */
