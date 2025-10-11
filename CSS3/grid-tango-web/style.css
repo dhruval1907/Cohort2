@@ -1,0 +1,211 @@
+@font-face {
+  font-family: popo;
+  src: url(./Poppins-Regular.ttf);
+}
+
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-size: 30px;
+  font-family: popo;
+}
+
+/* HTML & Body Setup */
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 40%;
+  width: 100%;
+  background-color: #111;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+
+main h1 {
+  font-size: 4vw;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: url(https://imgs.search.brave.com/C2Q555otqEVKdupRy2ZqFKFlMyT0ZdnjkdevvQKsLPY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9h/YnN0cmFjdC1yYWlu/Ym93LWNvbG9yZnVs/LWZpYnJlc18xMDQ4/LTEyNDc3LmpwZz9z/ZW10PWFpc19pbmNv/bWluZyZ3PTc0MCZx/PTgw);
+  background-size: cover;
+  background-position: left;
+
+}
+
+main p {
+  font-size: 0.9vw;
+  margin-top: 10px;
+  font-weight: 100;
+  opacity: 0.5;
+}
+
+.main {
+  height: 120%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+}
+
+#main1 {
+  height: 100%;
+  width: 70%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-areas: "sec1 sec2 sec2"
+    "sec1 sec3 sec4"
+    "sec5 sec5 sec6"
+  ;
+  grid-gap: 20px;
+  padding: 40px;
+}
+
+.sec1 {
+  background-color: rgb(218, 191, 191);
+  grid-area: sec1;
+  border-radius: 30px;
+  background-image: url(https://img.freepik.com/premium-photo/flat-lay-modern-tech-gadgets-including-laptop-tablet-phone-headphones-black-surface_14117-673589.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+.sec2 {
+  background-color: rgb(229, 198, 198);
+  grid-area: sec2;
+  border-radius: 30px;
+  background-image: url(https://img.freepik.com/premium-photo/flat-lay-black-tech-accessories-black-background_14117-693295.jpg?w=360);
+  background-size: cover;
+}
+
+
+.sec3 {
+  background-color: rgb(229, 110, 110);
+  grid-area: sec3;
+  border-radius: 30px;
+  background-image: url(https://img.freepik.com/premium-photo/sleek-modern-web-store-interface-with-clean-design-product-categories_995578-20546.jpg?w=360);
+  background-size: cover;
+}
+
+
+.sec4 {
+  background-color: rgb(90, 24, 24);
+  border-radius: 30px;
+  grid-area: sec4;
+  background: url(https://st4.depositphotos.com/1811396/22442/v/450/depositphotos_224426816-stock-illustration-black-3d-id-background-with.jpg);
+  background-size: cover;
+}
+
+
+.sec5 {
+  background-color: rgba(138, 39, 39, 0.436);
+  border-radius: 30px;
+  grid-area: sec5;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnKKdJ4URRFkgNN9pk4Jj3692e-MwSBiVRs2AEdESggwY__4Ho);
+  background-size: cover;
+}
+
+
+.sec6 {
+  background-color: rgb(213, 86, 86);
+  border-radius: 30px;
+  grid-area: sec6;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlotLDhAZhzPpGD7RsDN1Ac2-ajK_v0N9RvxrvJCWDtQXHwMavfdCYCQVgB89QzLNYl6c&usqp=CAU);
+  background-size: cover;
+}
+
+#section2{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: #111;
+  align-items: center;
+  justify-content: center;
+}
+
+.banto2{
+  height: 90%;
+  width: 60%;
+  /* background-color: blueviolet; */
+  display: grid;
+  grid-template-columns: 300px 350px 1fr ;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-areas: "class1 class1  class2"
+    "class3 class4 class5 "
+    "claas6 class7 class7   "
+  ;
+  grid-gap: 20px;
+} 
+
+.class1{
+  background-color: rgb(63, 135, 171);
+  background-image: url(./images/banto1.png);
+  background-size: cover;
+  grid-area: class1;
+  border-radius: 20px;  
+}
+
+
+.class2{
+  /* background-color: rgb(29, 172, 60); */
+  background-image: url(./images/banto2.png);
+  background-size: cover;
+  border-radius: 20px;  
+}
+.class3{
+  background-color: rgb(66, 25, 132);
+  border-radius: 20px;  
+  background-image: url(./images/banto.png);
+  background-size: cover;
+}
+
+.class4{
+  background-color: rgb(58, 35, 117);
+  border-radius: 20px;  
+  background-image: url(./images/banto4.png);
+  background-size: cover;
+  width: 100%;
+}
+
+.class5{
+  background-color: rgb(73, 131, 160);
+  border-radius: 20px;  
+  background-image: url(./images/banto5.png);
+  background-size: contain;
+  background-position: center;
+  width: 99%;
+
+}
+
+.class6{
+  background-color: rgb(22, 71, 141);
+  border-radius: 20px;  
+  background-image: url(./images/banto6.png);
+  background-size: cover;
+}
+
+.class7{
+  background-color: rgba(26, 159, 128, 0.57);
+  border-radius: 20px;  
+  background-image: url(./images/banto7.png);
+  background-size: cover;
+  width: 780px;
+  background-position: bottom;
+}
