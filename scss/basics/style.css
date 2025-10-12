@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+main section {
+  height: 100%;
+  border: none;
+  flex-grow: 1;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+section img {
+  height: 99.9%;
+  flex-grow: 1;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section:hover {
+  flex-grow: 1.5;
+}
+
+section:nth-child(1) {
+  background-image: url(https://i.pinimg.com/1200x/a3/bf/8a/a3bf8ad15f9e44a069b685c09ec6ae36.jpg);
+  background-size: cover;
+}
+
+section:nth-child(2) {
+  background-image: url(https://i.pinimg.com/1200x/62/32/fb/6232fba690b3a54452b2d47979ec2941.jpg);
+  background-size: cover;
+}
+
+section:nth-child(3) {
+  background-image: url(https://i.pinimg.com/1200x/3e/3a/a7/3e3aa71b6a0c09d8314048b7b52a2150.jpg);
+  background-size: cover;
+}
+
+section:nth-child(4) {
+  background-image: url(https://i.pinimg.com/736x/58/d9/df/58d9dff2e7b0628e76bb30368f9c326d.jpg);
+  background-size: cover;
+}
+
+section:nth-child(5) {
+  background-image: url(https://i.pinimg.com/736x/43/a3/0a/43a30a7db43d1318aa3614add3d97fe4.jpg);
+  background-size: cover;
+}/*# sourceMappingURL=style.css.map */
