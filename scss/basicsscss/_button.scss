@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+@mixin display(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+@mixin button-style($bg-color,$size,$jay) {
+    padding: 20px 30px;
+    background-color: $bg-color;
+    color: white;
+    font-size: $size;
+    border-radius: $jay;
+}
+
+.btn {
+    @include button-style(black,100px,120px);
+    @include display();
+}
+
+.btn{
+    @include button-style(red,200px ,200px );
+    @include display();
+}
