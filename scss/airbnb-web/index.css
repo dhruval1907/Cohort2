@@ -1,0 +1,194 @@
+@font-face {
+  font-family: popo;
+  src: url(./images/SFPRODISPLAYREGULAR.OTF);
+}
+@font-face {
+  font-family: thin;
+  src: url(./images/SFPRODISPLAYTHINITALIC.OTF);
+}
+@font-face {
+  font-family: semitalic;
+  src: url(./images/SFPRODISPLAYSEMIBOLDITALIC.OTF);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  font-family: popo;
+  background-color: #F1f1f1;
+  height: 23vh;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+nav #nav-part1 {
+  height: 120px;
+  width: 30vw;
+  padding-top: 10px;
+}
+nav #nav-part2 {
+  height: 100px;
+  width: 28vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav #nav-part2 .part1 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .part1 img {
+  height: 80%;
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+nav #nav-part2 .part2 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .part2 h5 {
+  opacity: 0.6;
+}
+nav .part2 img {
+  height: 80%;
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+nav #nav-part2 .part3 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .part3 h5 {
+  opacity: 0.6;
+}
+nav .part3 img {
+  height: 80%;
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+nav #nav-part3 {
+  height: 100px;
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 30px;
+}
+nav .logo1 {
+  height: 40px;
+  width: 40px;
+  background-color: #d2d0d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+nav .logo2 {
+  height: 40px;
+  width: 40px;
+  background-color: #d2d0d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+nav #nav-bottom {
+  height: 70px;
+  width: 50vw;
+  background-color: white;
+  position: absolute;
+  top: 55%;
+  border-radius: 50px;
+  box-shadow: 0.5px 0.5px 1px #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav #bottom-part1 {
+  width: 25%;
+}
+nav #bottom-part2 {
+  width: 20%;
+}
+nav #bottom-part3 {
+  width: 20%;
+}
+nav #bottom-part4 {
+  width: 25%;
+}
+
+#main-part {
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: popo;
+}
+
+#middle-part {
+  height: 95%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin-top: 50px;
+}
+#middle-part .middle-part {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+}
+#middle-part .imges i {
+  font-size: 10px;
+}
+#middle-part .imges h4 {
+  font-weight: 500;
+  opacity: 0.8;
+}
+#middle-part .middle-part .text-part {
+  width: 100%;
+  padding: 20px 20px;
+}
+#middle-part .middle-part .img-part {
+  height: 100%;
+  margin: 0px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#middle-part .middle-part img {
+  height: 80%;
+  border-radius: 30px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#middle-part .imges {
+  width: 200px;
+  height: 95%;
+}/*# sourceMappingURL=index.css.map */
