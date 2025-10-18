@@ -1,0 +1,415 @@
+@font-face {
+    font-family: lele;
+    src: url(./chillax-complete/Chillax-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    font-family: lele;
+    color: white;
+}
+
+@mixin flexBox($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    max-width: 2000px;
+    @include flexBox(1rem);
+    padding: 20px;
+
+    .top {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .bottom {
+        width: 100%;
+        background-color: rgb(25, 25, 25);
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 4.5rem;
+
+
+
+
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+
+
+
+        #para {
+            opacity: 0.7;
+            font-size: 20px;
+            font-weight: 300;
+            font-size: 1px !important;
+        }
+
+        h4 {
+            font-size: 1.2rem !important;
+            opacity: 0.7;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 2.3rem;
+            text-transform: uppercase;
+        }
+
+    }
+
+
+    .icon {
+        display: flex;
+        gap: 0.5rem;
+
+        i {
+            padding: 10px 10px;
+            // width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+
+    }
+
+
+    button {
+        width: fit-content;
+        padding: 10px 20px !important;
+        background-color: rgb(25, 25, 25);
+        color: white;
+        border-radius: 0.5rem;
+        outline: none;
+        border: none;
+        font-family: lele;
+    }
+}
+
+.view1 {
+    .wrapper {
+        width: 100%;
+        display: flex;
+
+        .wrapper1 {
+            width: 50%;
+            padding: 30px;
+
+            h4 {
+                font-size: 0.7rem;
+                opacity: 0.7;
+            }
+
+            h1 {
+                font-weight: 300;
+            }
+
+        }
+
+        .wrapper2 {
+            width: 50%;
+            padding: 30px;
+
+            h4 {
+                font-size: 0.7rem;
+                opacity: 0.7;
+            }
+
+            h1 {
+                font-weight: 300;
+            }
+
+        }
+    }
+}
+
+.view2 {
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+
+    .top {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .bottom {
+        width: 100%;
+        padding: 20px;
+        background-color: rgb(30, 30, 30);
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .bottom h3 {
+            font-size: 15px !important;
+        }
+    }
+
+}
+
+.view3 {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px !important;
+
+    #card {
+        gap: 20px;
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        i {
+            border: 0.5px solid #fff;
+            padding: 4px;
+            border-radius: 50%;
+            background: linear-gradient(transparent, #313027, white);
+            font-weight: 300 !important;
+            font-size: 20px;
+        }
+    }
+
+
+
+}
+
+.view5 {
+    width: 100%;
+    background-color: #CEBD63;
+    padding: 20px;
+
+    h1 {
+        font-size: 2.7rem;
+        line-height: 1.2;
+        width: 60%;
+        font-weight: 300;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+
+        i {
+            font-size: 1.8rem;
+        }
+    }
+
+
+}
+// desktop view
+
+@media screen and (min-width : 900px) {
+    section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .top,
+    .bottom {
+        width: 50%;
+    }
+
+    .bottom {
+        // display: flex;
+        padding: 50px !important;
+        justify-content: space-between;
+
+
+        h1 {
+            width: 90%;
+            font-size: 5rem !important;
+        }
+    }
+
+
+    h4 {
+        width: 70% !important;
+    }
+
+    .icon {
+        i {
+            padding: 15px !important;
+        }
+
+        button {
+            font-size: 1.2rem;
+        }
+    }
+
+    .wrapper1 {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-around;
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        h4 {
+            font-size: 1rem !important;
+        }
+    }
+
+
+    .wrapper2 {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-around;
+
+
+
+        h4 {
+            font-size: 1rem !important;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+
+    .view2 {
+        width: 100%;
+        display: flex;
+        padding: 30px 50px;
+        flex-direction: row-reverse;
+        gap: 25px;
+
+        .bottom {
+            border-radius: 20px;
+
+            h3 {
+                font-size: 1.1rem !important;
+                font-weight: 300;
+            }
+
+            h2 {
+                font-size: 4.3rem !important;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-size: 1.3rem !important;
+                width: 80% !important;
+            }
+
+        }
+    }
+
+    .view3 {
+        width: 100%;
+        display: flex;
+
+
+        h1 {
+            font-size: 3rem !important;
+            padding-left: 20px;
+        }
+
+        #card {
+            flex-direction: row;
+            display: flex;
+            width: 100%;
+            gap: 30px;
+
+
+            .icon {
+                top: 30px;
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+
+    #view4 {
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .view5 {
+        border-radius: 10px;
+        width: 100%;
+        padding: 50px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+
+        h1 {
+            font-size: 3rem;
+            width: 65% !important;
+        }
+
+        .text {
+            display: flex !important;
+            flex-direction: row;
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width:1600px) {
+    main {
+        align-items: center;
+    }
+}
