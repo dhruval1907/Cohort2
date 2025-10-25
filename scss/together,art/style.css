@@ -175,6 +175,67 @@ body {
   left: 30px;
 }
 
+.view4 {
+  width: 100%;
+  font-family: tt;
+  text-align: center;
+}
+.view4 .grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid: 2rem;
+}
+.view4 .grid1 {
+  width: 70%;
+  position: relative;
+}
+.view4 .grid1 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+  margin-top: 1rem;
+}
+
+.view5 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: tt;
+}
+.view5 .middle-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column !important;
+}
+.view5 .middle-div .top {
+  width: 100% !important;
+}
+.view5 .middle-div .top h1 {
+  width: 100%;
+  text-align: center;
+}
+.view5 .middle-div .top .text {
+  padding: 1rem;
+}
+.view5 .middle-div .top .text h4 {
+  font-weight: 500;
+}
+.view5 .middle-div .top .text p {
+  font-family: light;
+}
+.view5 .middle-div .bottom {
+  width: 100%;
+}
+.view5 .middle-div .bottom img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 1rem;
+}
+
 @media screen and (min-width: 900px) {
   .view1 {
     width: 100%;
@@ -286,5 +347,38 @@ body {
     position: absolute;
     top: 4rem;
     left: 4rem;
+  }
+  .view4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+  }
+  .view4 .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .view5 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .view5 .middle-div {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse !important;
+    justify-content: space-between;
+  }
+  .view5 .middle-div .top {
+    width: 45%;
+  }
+  .view5 .middle-div .top .text {
+    font-size: 1.5rem;
+  }
+  .view5 .middle-div .bottom {
+    width: 45%;
   }
 }/*# sourceMappingURL=style.css.map */

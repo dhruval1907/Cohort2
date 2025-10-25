@@ -214,15 +214,99 @@ body {
                 }
             }
 
-            .part2{
+            .part2 {
                 width: 100%;
 
-                .imges{width: 100%;position: absolute; top: 34px;left: 30px; }
+                .imges {
+                    width: 100%;
+                    position: absolute;
+                    top: 34px;
+                    left: 30px;
+                }
             }
 
         }
     }
 
+}
+
+.view4 {
+    width: 100%;
+    font-family: tt;
+    text-align: center;
+
+    .grid {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid: 2rem;
+    }
+
+    .grid1 {
+        width: 70%;
+        position: relative;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+            margin-top: 1rem;
+        }
+
+    }
+
+
+
+}
+
+.view5 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: tt;
+
+    .middle-div {
+        width: 100%;
+        display: flex;
+        flex-direction: column !important;
+
+        .top {
+            width: 100% !important;
+
+            h1 {
+                width: 100%;
+                text-align: center;
+            }
+
+            .text {
+                padding: 1rem;
+
+                h4 {
+                    font-weight: 500;
+                }
+
+                p {
+                    font-family: light;
+
+                }
+
+            }
+
+        }
+
+        .bottom {
+            width: 100% ;
+            // background-color: red;
+
+            img{
+                width: 100%;
+                object-fit: cover;
+                padding: 1rem;
+            }
+
+        }
+    }
 }
 
 
@@ -322,50 +406,52 @@ body {
 
     }
 
-    .view3{
+    .view3 {
         width: 100%;
-        .top{
+
+        .top {
             width: 100%;
             padding-top: 5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
 
-            h4{
+            h4 {
                 font-size: 2rem;
             }
 
-            p{
+            p {
                 text-align: center;
                 width: 55%;
             }
-            
+
         }
 
-        .bottom{
+        .bottom {
             display: flex;
             flex-direction: row !important;
-            
-            .card{
+
+            .card {
                 display: flex;
                 flex-direction: row !important;
                 padding: 4rem;
 
-                .part1{
+                .part1 {
                     display: flex;
                     flex-direction: column;
                     // align-items: center !important;
                     justify-content: center !important;
                 }
 
-                h4{
+                h4 {
                     color: #B35DF8;
                     font-size: 2rem;
                 }
-                
-                .part2{
+
+                .part2 {
                     position: relative;
-                    .imges{
+
+                    .imges {
                         height: 100%;
                         width: 100%;
                         position: absolute;
@@ -375,7 +461,51 @@ body {
                 }
 
             }
-            
+
+
+        }
+    }
+
+    .view4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+        }
+
+
+    }
+
+    .view5{
+        width: 100%;    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .middle-div{
+            width: 80%;
+            display: flex;
+            flex-direction: row-reverse !important;
+            justify-content: space-between;
+            .top{
+                width: 45%;
+
+                .text{
+                    font-size: 1.5rem;
+                    
+                }
+
+            }
+
+            .bottom{
+                width: 45%;
+            }
 
         }
     }
