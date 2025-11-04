@@ -36,12 +36,13 @@
 
 // 3. count num greater 8 into 1 to 15
 
-let n = 15, count = 0;
+// let n = 15, count = 0;
 
-for (i = 1; i <= 15; i++) {
-    if (i > 8){
-        console.log(i);
-    }
-}
+// for (i = 1; i <= 15; i++) {
+//     if (i > 8){
+//         console.log(i);
+//     }
+// }
+
 
 
