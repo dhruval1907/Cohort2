@@ -25,12 +25,23 @@
 // }
 
 
-// table of number 
-// let 
-let n = prompt("enter a number ")
+// 2. table of number 
+// let n = prompt("enter a number ")
 
-for(i=0;i<=10;i++){
-    let number = n * i;
-    console.log(`${n} x ${i}  =  ${number}`);
+// for(i=0;i<=10;i++){
+//     let number = n * i;
+//     console.log(`${n} x ${i}  =  ${number}`);
+// }
+
+
+// 3. count num greater 8 into 1 to 15
+
+let n = 15, count = 0;
+
+for (i = 1; i <= 15; i++) {
+    if (i > 8){
+        console.log(i);
+    }
 }
+
 
