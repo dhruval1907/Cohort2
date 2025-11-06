@@ -126,3 +126,12 @@
 //     let number = +prompt("number do bhai")
 //     num = nm
 // }
+
+// 9. print user input number start to end
+
+let fisrt = prompt("phela batao")
+let second = prompt("dusra batao")
+
+for(i=fisrt;i<=second;i++){
+    console.log(i);
+}
