@@ -102,3 +102,27 @@
 // }
 
 // console.log(`total times of yes is : ${counter}`);
+
+
+// 7.print number that divisible by 7 in 1 to 050
+
+// let sum = 0;
+// for (i = 1; i <= 30; i++) {
+//     if (i % 2 === 1) {
+//         // console.log(i);
+//         sum += i;
+
+//     }
+// }
+
+// console.log(sum);
+
+// 8. keep asking number until user enter even number
+
+// let number = +prompt("number do bhai")
+// num = number
+
+// while (num % 2 !== 0) {
+//     let number = +prompt("number do bhai")
+//     num = nm
+// }
