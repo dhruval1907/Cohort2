@@ -68,22 +68,37 @@
 // }
 
 // 5. allow only 3 attempts for correct password if user enter after three then account locked 
-let right = "hello";
-let attempt = 0;
-let flag = false
+// let right = "hello";
+// let attempt = 0;
+// let flag = false
 
-let password = prompt("passowrd batao")
-attempt++;
-if(password == right) flag = true
+// let password = prompt("passowrd batao")
+// attempt++;
+// if(password == right) flag = true
 
-while(password !== right){
-    if(attempt == 3) {
-        console.error("account locked");
-        break;
-    }
-    password = prompt("passowrd batao")
-    if(password == right) flag = true
-    attempt++;
-}
+// while(password !== right){
+//     if(attempt == 3) {
+//         console.error("account locked");
+//         break;
+//     }
+//     password = prompt("passowrd batao")
+//     if(password == right) flag = true
+//     attempt++;
+// }
 
-if(flag == true) console.log("account opened");
+// if(flag == true) console.log("account opened");
+
+
+// 6.take word from to user stop when user stop count the words
+
+// let word = prompt("word batao")
+// let counter = 0;
+
+// while(word !== "stop"){ 
+//     if(word === "yes"){
+//         counter++;
+//     }
+//     word = prompt("word batao");
+// }
+
+// console.log(`total times of yes is : ${counter}`);
