@@ -129,9 +129,35 @@
 
 // 9. print user input number start to end
 
-let fisrt = prompt("phela batao")
-let second = prompt("dusra batao")
+// let fisrt = prompt("phela batao")
+// let second = prompt("dusra batao")
 
-for(i=fisrt;i<=second;i++){
-    console.log(i);
+// for(i=fisrt;i<=second;i++){
+//     console.log(i);
+// }
+
+// 10. print odd num from 1 to 20 and print only 3
+
+// let counter = 0;
+
+// for(i=0;i<=20;i++){
+//     if(i%2!==0){
+//         if(counter === 3) break;
+//         console.log(i);
+//         counter++;
+//     }
+// }
+
+// 11. asking 5 times and check how many are positive
+
+let counter = 0;
+while(counter < 5){
+    let num = prompt("number likho")
+    if(num > 0 ){
+        console.log(`the ${num} is positive`);
+    }
+    else{
+        console.log(`the ${num} is nagative`);
+    }
+    counter++;
 }
