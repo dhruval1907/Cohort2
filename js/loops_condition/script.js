@@ -150,14 +150,31 @@
 
 // 11. asking 5 times and check how many are positive
 
+// let counter = 0;
+// while(counter < 5){
+//     let num = prompt("number likho")
+//     if(num > 0 ){
+//         console.log(`the ${num} is positive`);
+//     }
+//     else{
+//         console.log(`the ${num} is nagative`);
+//     }
+//     counter++;
+// }
+
+// 12. atm simulation
+
+let balance = 1000;
+
 let counter = 0;
-while(counter < 5){
-    let num = prompt("number likho")
-    if(num > 0 ){
-        console.log(`the ${num} is positive`);
-    }
-    else{
-        console.log(`the ${num} is nagative`);
-    }
+while(balance>0 && counter < 3){
+    let withdraw = +prompt("withdraw amount batao")
+    balance -= withdraw;
     counter++;
 }
+
+if(balance<0){
+    console.log("insuficeint balance");
+}
+
+console.log(`rest balance is ${balance}`);
