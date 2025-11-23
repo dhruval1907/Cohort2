@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-red-500 flex items-center justify-center flex-col gap-[20px]">
+
+    <div class="box w-[300px] h-[300px] bg-white rounded-xl">
+        <img class="diceImg rounded-xl" src="images/dice1.png" alt="dice" width="200">
+    </div>
+    <button class="w-[130px] h-[50px] bg-black text-white rounded-full">rolled it !!!!</button>
+
+    <script>
+        var box = document.querySelector("#box")
+        var btn = document.querySelector("button")
+        const images = [
+            "images/dice1.png",
+            "images/dice2.png",
+            "images/dice3.png",
+            "images/dice4.png",
+            "images/dice5.png",
+            "images/dice6.png"
+        ]
+
+        btn.addEventListener("click",function(){
+            var c1 = Math.random()*5
+
+            // console.log(c1);
+
+            // box.innerHTML = 
+            
+        })
+
+        
+    </script>
+</body>
+
+</html>
