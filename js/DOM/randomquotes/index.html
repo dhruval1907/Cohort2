@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        button:active{
+            scale: 0.95;
+
+        }
+    </style>
+</head>
+
+<body class="overflow-hidden">
+
+    <main class="h-screen w-full bg-black flex items-center justify-center ">
+        <button class="rounded-lg w-50 h-16 bg-red-500 text-white font-black relative z-[5]">Generate Quotes</button>
+    </main>
+
+
+
+    <script>
+        var arr = ["Whatever you are, be a good one.", "Alone or not you gonna walk forward.", "My only goal in life right now is to be genuinely happy.", "Do not judge my story by the chapter you walked in on", "I have nothing to declare except my genius.", "Ask for help. Pretending you’re fine will damage your spine.", "We must dare to think unthinkable thoughts."]
+        var main = document.querySelector("main")
+        var btn = document.querySelector("button")
+
+
+        btn.addEventListener("click", function () {
+
+            var c1 = Math.floor(Math.random() * arr.length)
+            var x = Math.random() * 80
+            var y = Math.random() * 80
+            var z = Math.random() * 360
+            var scale = Math.random() * 3
+            
+            var h1 = document.createElement("h1");
+            // h1.innerHTML = "hyyyyy"
+            h1.innerHTML = arr[c1]
+            h1.style.color = "white"
+            h1.style.fontSize = "20px"
+            h1.style.fontWeight = "900"
+            h1.style.position = "absolute"
+            h1.style.top = x+"%"
+            h1.style.left = y+"%"
+            h1.style.rotate = z+"deg"
+            h1.style.scale = scale
+            
+
+            console.log();
+
+            main.appendChild(h1)
+
+        })
+
+    </script>
+</body>
+
+</html>
