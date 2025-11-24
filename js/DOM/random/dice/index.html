@@ -22,7 +22,7 @@
         var h1 = document.querySelector("h1")
         var img = document.querySelector(".diceImg")
 
-        let images = [
+        const images = [
             "images/dice1.png",
             "images/dice2.png",
             "images/dice3.png",
@@ -35,7 +35,6 @@
             var c1 = Math.floor(Math.random() * 7)
             var selectedimg = images[c1]
             img.src = selectedimg;
-
         })
 
     </script>
