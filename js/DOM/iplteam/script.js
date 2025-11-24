@@ -21,3 +21,14 @@ var arr = [
         winner : "https://imgs.search.brave.com/vFi3Q5qYjP5u0WJlgkCGXruJ7nX_TTKM8_9a6NPLs78/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuaW5kaWFuZXhw/cmVzcy5jb20vMjAy/NC8wNS9TaHJleWFz/LUl5ZXItS0tSLUlQ/TC0yMDI0LUtLUi12/cy1TUkguanBnP3c9/NjQw"
     }
 ]
+
+
+btn.addEventListener("click",function(){
+
+    var a = arr[Math.floor(Math.random()*arr.length)]
+    // console.log(a);
+
+    h1.innerHTML = a.team
+    
+
+})
