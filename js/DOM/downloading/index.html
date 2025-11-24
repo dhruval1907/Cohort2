@@ -29,11 +29,10 @@
         var h2 = document.querySelector("h2")
 
         var grow = 0
-        var ingrow = 0
         button.addEventListener("click", function () {
             button.style.pointerEvents = "none"
 
-            var random = 10 + Math.floor(Math.random() * 50)
+            var random = 50 + Math.floor(Math.random() * 50)
 
             console.log(random);
 
@@ -48,7 +47,7 @@
                 clearInterval(int)
                 button.innerHTML = "downloaded"
                 button.style.opacity = "0.5"
-            }, random*100);
+            }, random * 100);
         })
     </script>
 </body>
