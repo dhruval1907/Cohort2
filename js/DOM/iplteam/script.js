@@ -29,6 +29,7 @@ btn.addEventListener("click",function(){
     // console.log(a);
 
     h1.innerHTML = a.team
+    img.src = a.winner
     
 
 })

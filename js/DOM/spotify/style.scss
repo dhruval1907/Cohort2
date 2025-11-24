@@ -1,0 +1,100 @@
+@font-face {
+    font-family: chill;
+    src: url(./Chillax-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(61, 58, 58);
+    display: flex;
+}
+
+.clm-part1 {
+    height: 100%;
+    width: 20%;
+    background-color: black;
+}
+
+#left-part1 {
+    height: 13rem;
+    width: 100%;
+
+    .navsec1 {
+        height: 70px;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        gap: 20px;
+        // border: 1px solid white;
+        width: 60%;
+        // background-color: yellow;
+        font-family: chill;
+
+        h3 {
+            color: white;
+            font-size: 15px;
+        }
+
+        i {
+            color: white;
+            font-size: 22px;
+        }
+    }
+
+
+}
+
+#left-part2 {
+    height: 25rem;
+    width: 100%;
+    // background-color: red;
+
+    img{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        margin-top: 3rem;
+        margin-left: 1rem;
+    }
+
+}
+
+
+.clm-part2 {
+    height: 100%;
+    // background-color: red;
+    width: 80%;
+    background: linear-gradient(#2F4D69, #111111, #1a1a1a);
+
+    #right-part1{
+        height: 300px;
+        width: 100%;
+        // background-color: red;
+
+        img{
+            height: 80%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    #right-part2{
+        height: 60%;
+        width: 100%;
+        background-color: red;
+    }
+}
