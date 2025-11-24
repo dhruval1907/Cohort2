@@ -8,10 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="overflow-hidden">
 
-    <main class="h-screen w-full bg-black flex items-center justify-center">
-        <button class="text-white h-15 w-50 bg-red-500  rounded-xl">Create element</button>
+    <main class="h-screen w-full bg-black flex items-center justify-center overflow-hidden">
+        <button class="text-white h-15 w-50 bg-red-500  rounded-xl relative z-[5] ">Create element</button>
 
     </main>
 
@@ -23,7 +23,26 @@
 
 
         btn.addEventListener("click",function(){
-            var div = document.createElement("div")
+            var div = document.createElement(div)
+
+            // div.innerHtml = "hyyyy"
+            var x = Math.random()*100
+            var y = Math.random()*100
+            var z = Math.random()*100
+            var r = Math.random()*100
+            var c1 = Math.floor(Math.random()*255)
+            var c2 = Math.floor(Math.random()*255)
+            var c3 = Math.floor(Math.random()*255)
+
+            div.style.height = '100px'
+            div.style.width = '100px'
+            div.style.backgroundColor = `rgb(${c1},${c2},${c3})`
+            div.style.position = 'absolute'
+            div.style.left = x+'%'
+            div.style.top = y+'%'
+            div.style.rotate = z+'deg'
+            div.style.borderRadius = r+'px'
+            main.style.backgroundColor = `rgb(${c1},${c2},${c3})`
             main.appendChild(div)
             
         })
