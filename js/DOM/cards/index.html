@@ -11,7 +11,6 @@
 <body>
 
     <main class="w-full h-screen bg-black p-3 flex gap-4">
-
     </main>
 
 
@@ -47,23 +46,22 @@
             }
         ];
 
-
-        var count = ''
+        var val = ''
         people.forEach(function (elem) {
-            count = count + ` <div class="card w-[25%] h-[72%] bg-white rounded-xl flex justify-center flex-col items-center">
-            <img src="${elem.image}"
-                alt="" class="w-[70%] h-[50%] rounded-[50%]">
+            val = val + ` <div class="card w-[25%] h-[72%] bg-white rounded-xl flex justify-center flex-col items-center">
+                <img src = "${elem.image}"
+            alt = "" class="w-[70%] h-[50%] rounded-[50%]" >
             <h1 class="text-3xl">${elem.name}</h1>
             <h2 class="text-xl text-red-500">${elem.profession}</h2>
-            <p class="text-center w-[80%]">${elem.description}
-            </p>
-        </div>`
+            <p class="text-center w-[80%]">${elem.description}</p>
+        </div > `
         })
 
-        // console.log(count);
-        var main = document.querySelector("main")
 
-        main.innerHTML = count
+
+
+        var main = document.querySelector("main")
+        main.innerHTML = val
 
 
     </script>
