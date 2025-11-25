@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Effect</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body style="overflow: hidden;">
+
+    <main class="h-screen w-full bg-black relative">
+
+        <img src="./takla.png" class="img1 w-[4rem] h-[4rem] absolute">
+        <img src="./thor.png" class="img2 w-[14rem] h-[7rem] absolute">
+
+    </main>
+
+    <script>
+        var img1 = document.querySelector(".img1");
+        var img2 = document.querySelector(".img2");
+        var main = document.querySelector("main")
+
+        main.addEventListener("mousemove",function(dets){
+            img1.style.top = dets.y + "px"
+            img1.style.left = dets.x + "px"
+            img2.style.bottom = dets.y + "px"
+            img2.style.right = dets.x + "px"
+        })
+        
+    </script>
+
+</body>
+
+</html>
