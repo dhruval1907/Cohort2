@@ -17,39 +17,59 @@
                 <div class="inner h-full rounded-3xl bg-sky-900"></div>
             </div>
             <div class="btn w-full flex items-center justify-between">
-                <h2 class="font-semibold text-6xl">0%</h2>
-                <button class="h-10 w-50 bg-sky-800 rounded-3xl text-white font-extrabold">Start Download</button>
+                <h2 class="font-semibold text-4xl">0%</h2>
+                <button class="h-10 w-40 bg-sky-800 rounded-3xl text-white font-extrabold">Start Download</button>
+                <button class="stop h-10 w-40 bg-red-600 rounded-3xl text-white font-extrabold">
+                    Stop
+                </button>
             </div>
         </div>
     </main>
+
+
     <script>
         var card = document.querySelector(".card")
         var inner = document.querySelector(".inner")
-        var button = document.querySelector("button")
+        var btn = document.querySelector("button")
+        var stop = document.querySelector(".stop")
         var h2 = document.querySelector("h2")
+        var h1 = document.querySelector("h1")
 
-        var grow = 0
-        button.addEventListener("click", function () {
-            button.style.pointerEvents = "none"
-
+        btn.addEventListener("click", function () {
+            btn.style.pointerEvents = 'none'
+            var grow = 0
             var random = 50 + Math.floor(Math.random() * 50)
-
             console.log(random);
 
             var int = setInterval(() => {
-                // inner.innerHTML = "width"   
-                grow++;
-                h2.innerHTML = grow + '%'
-                inner.style.width = grow + '%'
+                // console.log("herllo");
+                grow++
+                h2.innerHTML = grow + "%"
+                inner.style.width = grow + "%"
             }, random);
+
 
             setTimeout(() => {
                 clearInterval(int)
-                button.innerHTML = "downloaded"
-                button.style.opacity = "0.5"
+
             }, random * 100);
+            var text = ` time to reach is ${random / 100}`;
+
+            var text1 = document.createElement("h3")
+            h1.appendChild(text1)
+            text1.innerHTML = text
         })
+
+        // stop.addEventListener("click", function () {
+        //     // console.log("stopped");
+        //     setInterval(() => {
+        //         clearInterval(int)
+        //     }, 2000);
+
+        // })
+
     </script>
+
 </body>
 
 </html>
