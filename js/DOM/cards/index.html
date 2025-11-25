@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <main class="w-full h-screen bg-black p-3 flex gap-4">
+
+    </main>
+
+
+    <script>
+        const people = [
+            {
+                name: "Rahul Sharma",
+                profession: "Web Developer",
+                city: "Mumbai",
+                description: "Specializes in building responsive front-end interfaces.",
+                image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36" // male portrait
+            },
+            {
+                name: "Anita Verma",
+                profession: "UI/UX Designer",
+                city: "Delhi",
+                description: "Passionate about crafting clean and user-friendly designs.",
+                image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb" // female portrait
+            },
+            {
+                name: "Arjun Patel",
+                profession: "Software Engineer",
+                city: "Ahmedabad",
+                description: "Works on backend systems and scalable architectures.",
+                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e" // male portrait with glasses
+            },
+            {
+                name: "Sneha Kapoor",
+                profession: "Data Analyst",
+                city: "Bangalore",
+                description: "Loves working with data to uncover hidden insights.",
+                image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" // female portrait smiling
+            }
+        ];
+
+
+        var count = ''
+        people.forEach(function (elem) {
+            count = count + ` <div class="card w-[25%] h-[72%] bg-white rounded-xl flex justify-center flex-col items-center">
+            <img src="${elem.image}"
+                alt="" class="w-[70%] h-[50%] rounded-[50%]">
+            <h1 class="text-3xl">${elem.name}</h1>
+            <h2 class="text-xl text-red-500">${elem.profession}</h2>
+            <p class="text-center w-[80%]">${elem.description}
+            </p>
+        </div>`
+        })
+
+        // console.log(count);
+        var main = document.querySelector("main")
+
+        main.innerHTML = count
+
+
+    </script>
+</body>
+
+</html>
