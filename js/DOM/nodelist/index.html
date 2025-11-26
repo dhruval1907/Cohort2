@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <main class="h-screen w-full bg-black text-white font-bold flex flex-col gap-10 p-[10rem]">
+        <div class="elem bg-red-300 flex items-center w-[50%] justify-between p-2 rounded-xl">
+            <h1 class="text-black text-2xl p-4">Dhruval</h1>
+            <button class="w-32 h-20 bg-blue-500 rounded-xl">Add Friend</button>
+        </div>
+        <div class="elem bg-red-300 flex items-center  w-[50%] justify-between p-2 rounded-xl">
+            <h1 class="text-black text-2xl p-4">Dhara</h1>
+            <button class="w-32 h-20 bg-blue-500 rounded-xl">Add Friend</button>
+        </div>
+        <div class="elem bg-red-300 flex items-center  w-[50%] justify-between p-2 rounded-xl">
+            <h1 class="text-black text-2xl p-4">Jyoti</h1>
+            <button class="w-32 h-20 bg-blue-500 rounded-xl">Add Friend</button>
+        </div>
+
+    </main>
+    <script>
+        var allH1 = document.querySelectorAll("button")
+        // console.log(allH1);
+
+        allH1.forEach(function (elem) {
+            // console.log(elem.innerHTML);
+            elem.addEventListener("click", function () {
+                if (elem.innerHTML == "add friend") {
+                    elem.innerHTML = "remove friend" 
+                }else{
+                    elem.innerHTML = "add friend" 
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>
