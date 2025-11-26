@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <style>
+        .right {
+            height: 40px;
+            position: absolute;
+            right: 3%;
+            bottom: 250%;
+            /* transform: translateX(100%); */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        i {
+            color: white;
+            font-size: 25px;
+
+        }
+
+        .right h4 {
+            cursor: pointer;
+        }
+
+        .right h6 {
+            font-size: 18px;
+        }
+
+        .all-reels {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .reel {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+
+        .all-reels::-webkit-scrollbar {
+            display: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <main class="h-screen w-full flex items-center justify-center "
+        style="background: linear-gradient(to right bottom,rgb(36, 35, 35),rgb(29, 28, 28),black);">
+        <section class="card w-[30%] h-[85%] bg-black rounded-3xl overflow-auto">
+            <div class="all-reels h-[100%] w-[100%] overflow-auto">
+                <div class="reel h-[100%] w-[100%] bg-red-500 rounded-3xl relative overflow-hidden mb-[4rem]">
+                    <video autoplay loop muted src="./vid/1.mp4" class="h-screen w-full"></video>
+
+                    <div class="user absolute w-full h-[20%] bottom-0 rounded-3xl "
+                        style="background: linear-gradient(transparent,rgb(100, 87, 87));">
+                        <div class="bottom flex justify-start p-4 flex-col ">
+                            <div class="flex items-center gap-2 p-2">
+                                <img src="https://images.unsplash.com/photo-1626818590138-c1e906bf29be?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="" class="  " style="border-radius: 50%;height: 40px;width: 40px;">
+                                <h2 class="text-white font-rugular text-base">sarthack.sharma</h2>
+                                <button
+                                    class="text-white p-1 w-[4rem] border rounded-xl text-sm font-semibold follow">Follow</button>
+                            </div>
+                            <div class="">
+                                <p class="text-white text-base font-bold px-3">Believe in your grind, even when no one
+                                    is watching.
+                                    #KeepPushing </p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="like">
+                                <h4 class="like-icon"><i class="ri-heart-3-line"></i></h4>
+                                <h6>200</h6>
+                            </div>
+                            <div class="comment">
+                                <h4 class="comment-icon"><i class="ri-chat-3-line"></i></h4>
+                                <h6>69</h6>
+                            </div>
+                            <div class="share">
+                                <h4 class="share-icon"><i class="ri-share-forward-line"></i></h4>
+                                <h6>20</h6>
+                            </div>
+                            <div class="menu">
+                                <h4 class="menu-icon"><i class="ri-more-2-line"></i></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reel h-[100%] w-[100%] bg-red-500 rounded-3xl relative">
+                    <img src="https://images.unsplash.com/photo-1599309329365-0a9ed45a1da3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" class="h-[100%] w-[100%] rounded-3xl main-img">
+                    <div class="user absolute w-full h-[20%] bottom-0 rounded-3xl "
+                        style="background: linear-gradient(transparent,rgb(100, 87, 87));">
+                        <div class="bottom flex justify-start p-4 flex-col ">
+                            <div class="flex items-center gap-2 p-2">
+                                <img src="https://images.unsplash.com/photo-1626818590138-c1e906bf29be?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="" class="  " style="border-radius: 50%;height: 40px;width: 40px;">
+                                <h2 class="text-white font-rugular text-base">sarthack.sharma</h2>
+                                <button
+                                    class="text-white p-1 w-[4rem] border rounded-xl text-sm font-semibold follow">Follow</button>
+                            </div>
+                            <div class="">
+                                <p class="text-white text-base font-bold px-3">Believe in your grind, even when no one
+                                    is watching.
+                                    #KeepPushing </p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="like">
+                                <h4 class="like-icon"><i class="ri-heart-3-line"></i></h4>
+                                <h6>200</h6>
+                            </div>
+                            <div class="comment">
+                                <h4 class="comment-icon"><i class="ri-chat-3-line"></i></h4>
+                                <h6>69</h6>
+                            </div>
+                            <div class="share">
+                                <h4 class="share-icon"><i class="ri-share-forward-line"></i></h4>
+                                <h6>20</h6>
+                            </div>
+                            <div class="menu">
+                                <h4 class="menu-icon"><i class="ri-more-2-line"></i></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script>
+
+        var allreel = document.querySelector(".all-reels")
+        const reels = [
+            {
+                username: "tech_guru",
+                likeCount: 1520,
+                isLiked: false,
+                commentCount: 120,
+                caption: "Building cool stuff with JavaScript.",
+                video: "./vid/1.mp4",
+                userProfile: "https://randomuser.me/api/portraits/men/11.jpg",
+                shareCount: 45,
+                isFollowed: true
+            },
+            {
+                username: "design_diya",
+                likeCount: 980,
+                isLiked: true,
+                commentCount: 75,
+                caption: "Minimal UI > Everything.",
+                video: "./vid/2.mp4",
+                userProfile: "https://randomuser.me/api/portraits/women/32.jpg",
+                shareCount: 20,
+                isFollowed: false
+            },
+            {
+                username: "coding_with_aryan",
+                likeCount: 2650,
+                isLiked: false,
+                commentCount: 310,
+                caption: "Today's bug became tomorrow's feature.",
+                video: "./vid/3.mp4",
+                userProfile: "https://randomuser.me/api/portraits/men/45.jpg",
+                shareCount: 120,
+                isFollowed: true
+            },
+            {
+                username: "foodie_rashi",
+                likeCount: 4320,
+                isLiked: true,
+                commentCount: 210,
+                caption: "Trying a new pasta recipe.",
+                video: "./vid/4.mp4",
+                userProfile: "https://randomuser.me/api/portraits/women/12.jpg",
+                shareCount: 140,
+                isFollowed: true
+            },
+            {
+                username: "travel_with_kabir",
+                likeCount: 5890,
+                isLiked: false,
+                commentCount: 460,
+                caption: "Go where you feel most alive.",
+                video: "./vid/5.mp4",
+                userProfile: "https://randomuser.me/api/portraits/men/28.jpg",
+                // video: "",
+                shareCount: 310,
+                isFollowed: false
+            },
+            {
+                username: "dancebyneha",
+                likeCount: 3010,
+                isLiked: false,
+                commentCount: 180,
+                caption: "New choreography dropping soon.",
+                // video: "",
+                userProfile: "https://randomuser.me/api/portraits/women/8.jpg",
+                video: "./vid/6.mp4",
+                shareCount: 77,
+                isFollowed: true
+            },
+            {
+                username: "fitness_vik",
+                likeCount: 7210,
+                isLiked: true,
+                commentCount: 540,
+                caption: "No shortcuts. Just hard work.",
+                video: "./vid/7.mp4",
+                // video: "",
+                userProfile: "https://randomuser.me/api/portraits/men/6.jpg",
+                shareCount: 410,
+                isFollowed: false
+            },
+            {
+                username: "artistic_sana",
+                likeCount: 1880,
+                isLiked: false,
+                commentCount: 90,
+                caption: "Another digital sketch completed.",
+                video: "./vid/8.mp4",
+                // video: "",
+                userProfile: "https://randomuser.me/api/portraits/women/21.jpg",
+                shareCount: 30,
+                isFollowed: true
+            },
+            {
+                username: "music_by_om",
+                likeCount: 5120,
+                isLiked: false,
+                commentCount: 260,
+                caption: "New beat. What do you think?",
+                video: "./vid/9.mp4",
+                // video: "",
+                userProfile: "https://randomuser.me/api/portraits/men/52.jpg",
+                shareCount: 200,
+                isFollowed: false
+            },
+            {
+                username: "life_of_tia",
+                likeCount: 2370,
+                isLiked: true,
+                commentCount: 130,
+                caption: "Sunset vibes always win.",
+                video: "",
+                video: "./vid/5.mp4",
+                userProfile: "https://randomuser.me/api/portraits/women/42.jpg",
+                shareCount: 60,
+                isFollowed: true
+            }
+        ];
+
+        var count = ''
+        reels.forEach(function (elem) {
+            // console.log(elem);
+            count = count + `    <div class="reel h-[100%] w-[100%]  rounded-3xl relative mb-8">
+                    <video autoplay loop muted src="${elem.video}" ></video>
+                    <div class="user absolute w-full h-[20%] bottom-0 rounded-3xl "
+                        style="background: linear-gradient(transparent,rgb(100, 87, 87));">
+                        <div class="bottom flex justify-start p-4 flex-col ">
+                            <div class="flex items-center gap-2 p-2">
+                                <img src="${elem.userProfile}"
+                                    alt="" class="  " style="border-radius: 50%;height: 40px;width: 40px;">
+                                <h2 class="text-white font-rugular text-base">${elem.username}</h2>
+                                <button
+                                    class="text-white p-1 w-[4rem] border rounded-xl text-sm font-semibold follow">Follow</button>
+                            </div>
+                            <div class="">
+                                <p class="text-white text-base font-bold px-3">${elem.caption}
+                                    #KeepPushing </p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="like">
+                                <h4 class="like-icon"><i class="ri-heart-3-line"></i></h4>
+                                <h6>${elem.likeCount}</h6>
+                            </div>
+                            <div class="comment">
+                                <h4 class="comment-icon"><i class="ri-chat-3-line"></i></h4>
+                                <h6>${elem.commentCount}</h6>
+                            </div>
+                            <div class="share">
+                                <h4 class="share-icon"><i class="ri-share-forward-line"></i></h4>
+                                <h6>${elem.shareCount}</h6>
+                            </div>
+                            <div class="menu">
+                                <h4 class="menu-icon"><i class="ri-more-2-line"></i></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+
+
+        })
+
+        allreel.innerHTML = count
+        function follow() {
+            var follow = document.querySelector(".follow")
+            follow.addEventListener("click", function () {
+                var int = setInterval(() => {
+                    follow.innerHTML = "Followed"
+                }, 200);
+
+                setInterval(() => {
+                    follow.innerHTML = "Follow"
+                }, 4000);
+
+                setTimeout(() => {
+                    clearInterval(int)
+                }, 1000);
+
+            })
+        }
+
+        follow();
+    </script>
+</body>
+
+</html>
