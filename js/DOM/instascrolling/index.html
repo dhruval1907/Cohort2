@@ -49,9 +49,125 @@
         .all-reels::-webkit-scrollbar {
             display: none;
         }
-        .love1{
+
+        .love1 {
             color: red;
         }
+
+        .like h4 {
+            pointer-events: none;
+        }
+
+        .like h6 {
+            pointer-events: none;
+        }
+/* ---------- Mobile Optimization + Fixes ---------- */
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+
+    /* Full screen layout */
+    .card {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 0 !important;
+        background: black !important;
+    }
+
+    .reel {
+        height: 100% !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+        margin-bottom: 0 !important;
+        background: black !important;
+    }
+
+    /* Fix videos & images covering full screen */
+    video,
+    .main-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 0 !important;
+        background: black !important;
+    }
+
+    /* Bottom user section */
+    .user {
+        height: 30% !important;
+        padding-bottom: 20px;
+    }
+
+    .user img {
+        height: 42px !important;
+        width: 42px !important;
+    }
+
+    .user h2 {
+        font-size: 18px !important;
+        font-weight: 600;
+    }
+
+    .user p {
+        font-size: 15px !important;
+    }
+
+    .follow {
+        font-size: 14px !important;
+        padding: 4px 10px !important;
+    }
+
+    /* Bigger icons on mobile */
+    .right i {
+        font-size: 28px !important;
+    }
+
+    /* Move right section slightly inward */
+    .right {
+        right: 6% !important;
+        bottom: 150% !important;
+        gap: 12px !important;
+    }
+
+    /* Number counters under icons */
+    .right h6 {
+        font-size: 18px !important;
+        font-weight: 600;
+    }
+}
+
+/* Large Phones (max-width: 768px) */
+@media (max-width: 768px) {
+
+    .card {
+        width: 90% !important;
+        height: 95% !important;
+    }
+
+    .reel {
+        border-radius: 20px !important;
+    }
+
+    video,
+    .main-img {
+        object-fit: cover !important;
+        border-radius: 20px !important;
+    }
+
+    .right i {
+        font-size: 26px !important;
+    }
+
+    .right {
+        right: 5%;
+        bottom: 160%;
+    }
+
+    .right h6 {
+        font-size: 17px !important;
+    }
+}
+
     </style>
 </head>
 
@@ -259,18 +375,21 @@
                 commentCount: 130,
                 caption: "Sunset vibes always win.",
                 video: "",
-                video: "./vid/5.mp4",
+                video: "./vid/10.mp4",
                 userProfile: "https://randomuser.me/api/portraits/women/42.jpg",
                 shareCount: 60,
                 isFollowed: true
             }
         ];
 
-        var count = ''
-        reels.forEach(function (elem) {
-            // console.log(elem);
-            count = count + `    <div class="reel h-[100%] w-[100%]  rounded-3xl relative mb-8">
-                    <video autoplay loop muted src="${elem.video}" ></video>
+        function allStuff() {
+            var count = 0
+            reels.forEach((elem,idx) => {
+                // console.log(elem.idx);
+                
+                count += `  <div class="reel h-[100%] w-[97%] rounded-3xl relative overflow-hidden mb-[4rem]">
+                    <video autoplay loop muted src="${elem.video}" class="h-screen w-full"></video>
+
                     <div class="user absolute w-full h-[20%] bottom-0 rounded-3xl "
                         style="background: linear-gradient(transparent,rgb(100, 87, 87));">
                         <div class="bottom flex justify-start p-4 flex-col ">
@@ -278,17 +397,16 @@
                                 <img src="${elem.userProfile}"
                                     alt="" class="  " style="border-radius: 50%;height: 40px;width: 40px;">
                                 <h2 class="text-white font-rugular text-base">${elem.username}</h2>
-                                <button
-                                    class="text-white p-1 w-[4rem] border rounded-xl text-sm font-semibold follow">${elem.isFollowed?'unfollow':'follow'}</button>
+                                <button 
+                                    class="text-white p-1 w-[4rem] border rounded-xl text-sm font-semibold follow" id=${idx}>${elem.isFollowed?'unfollow':'follow'}</button>
                             </div>
                             <div class="">
-                                <p class="text-white text-base font-bold px-3">${elem.caption}
-                                    #KeepPushing </p>
+                                <p class="text-white text-base font-bold px-3">${elem.caption}</p>
                             </div>
                         </div>
                         <div class="right">
-                            <div class="like">
-                                <h4 class="like-icon">${elem.isLiked?'<i class="ri-heart-3-fill love1"></i>':'<i class="ri-heart-3-line "></i>'}</h4>
+                            <div class="like" id=${idx}>
+                                <h4 class="like-icon">${elem.isLiked?'<i class="ri-heart-3-fill love1"></i>':'<i class="ri-heart-line"></i>'}</h4>
                                 <h6>${elem.likeCount}</h6>
                             </div>
                             <div class="comment">
@@ -306,29 +424,28 @@
                     </div>
                 </div>`
 
-
-        })
-
-        allreel.innerHTML = count
-        function follow() {
-            var follow = document.querySelector(".follow")
-            follow.addEventListener("click", function () {
-                var int = setInterval(() => {
-                    follow.innerHTML = "Followed"
-                }, 200);
-
-                setInterval(() => {
-                    follow.innerHTML = "Follow"
-                }, 4000);
-
-                setTimeout(() => {
-                    clearInterval(int)
-                }, 1000);
-
             })
+            
+            allreel.innerHTML = count
         }
-
-        follow();
+        allStuff()
+        
+        allreel.addEventListener("click",function(dets){
+            if(!reels[dets.target.id].isLiked){
+                reels[dets.target.id].likeCount++
+                reels[dets.target.id].isLiked = true
+            }else{
+                reels[dets.target.id].likeCount--
+                reels[dets.target.id].isLiked = false
+            }
+            if(!reels[dets.target.id].isFollowed){
+                reels[dets.target.id].isFollowed =true
+            }else{
+                reels[dets.target.id].isFollowed =false
+            }
+            allStuff()
+        })
+      
     </script>
 </body>
 
