@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        ::selection {
+            user-select: none;
+        }
+
+        main {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,33 +24,27 @@
     </main>
 
     <script>
-        const para = document.querySelector("p")
-        // console.log(p);
-        const text = para.innerText
-        const char = "ABCDEFGHIJKLMNOPQRSTUVWXabcdefghijklmnopqrstuvwx"
-        console.log(text);
+        let p = document.querySelector("p")
+        let text = p.innerHTML
+        let char = "ABCDEFGHIJKLMNOPQRTUVWXabcdefghijklmnopqrstuvwx"
 
-        let increement = 0
-        function abcd() {
-           const str =  text.split("").map(function (chars,index) {
-            if(index<increement){
-                return char
-            }
+
+        let count = 0
+        function all() {
+            let val = text.split("").map(function (elem,indx) {
+                if(indx<count){
+                    return elem
+                }
                 return char.split("")[Math.floor(Math.random() * 52)]
             }).join("")
-            para.innerText = str 
 
-            increement+= 0.25
+            p.innerHTML = val
+            count+=0.50
         }
-
-        // abcd()
-
-        setInterval(abcd,30)
-
-
-
-
+        // all()
+        setInterval(all,30)
     </script>
+
 </body>
 
 </html>
