@@ -431,18 +431,24 @@
         allStuff()
         
         allreel.addEventListener("click",function(dets){
-            if(!reels[dets.target.id].isLiked){
-                reels[dets.target.id].likeCount++
-                reels[dets.target.id].isLiked = true
-            }else{
-                reels[dets.target.id].likeCount--
-                reels[dets.target.id].isLiked = false
+            if(dets.target.className  =="like"){
+                if(!reels[dets.target.id].isLiked){
+                    reels[dets.target.id].likeCount++
+                    reels[dets.target.id].isLiked = true
+                }else{
+                    reels[dets.target.id].likeCount--
+                    reels[dets.target.id].isLiked = false
+                }
             }
-            if(!reels[dets.target.id].isFollowed){
-                reels[dets.target.id].isFollowed =true
-            }else{
-                reels[dets.target.id].isFollowed =false
+             if (dets.target.className = "follow") {
+                if (!reels[dets.target.id].isFollowed) {
+                    reels[dets.target.id].isFollowed = true
+                }
+                else {
+                    reels[dets.target.id].isFollowed = false
+                }
             }
+
             allStuff()
         })
       
