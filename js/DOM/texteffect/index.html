@@ -15,8 +15,31 @@
     </main>
 
     <script>
-        var para = document.querySelector("p")
-        console.log(p);
+        const para = document.querySelector("p")
+        // console.log(p);
+        const text = para.innerText
+        const char = "ABCDEFGHIJKLMNOPQRSTUVWXabcdefghijklmnopqrstuvwx"
+        console.log(text);
+
+        let increement = 0
+        function abcd() {
+           const str =  text.split("").map(function (chars,index) {
+            if(index<increement){
+                return char
+            }
+                return char.split("")[Math.floor(Math.random() * 52)]
+            }).join("")
+            para.innerText = str 
+
+            increement+= 0.25
+        }
+
+        // abcd()
+
+        setInterval(abcd,30)
+
+
+
 
     </script>
 </body>
