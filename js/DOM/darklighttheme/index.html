@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        :root {
+            --bg: #ffffff;
+            /* --bg: #; */
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            transition: 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="h-screen w-full  flex items-center justify-center">
+        <button class="w-50 h-20 bg-green-400 text-black font-bold text-2xl toggle">click to change </button>
+    </main>
+
+
+
+    <script>
+        var btn = document.querySelector("button");
+        var isDark = false;
+
+        btn.addEventListener("click", function () {
+            if (!isDark) {
+                document.documentElement.style.setProperty("--bg", "#111");
+                document.documentElement.style.setProperty("--text", "#fff");
+                isDark = true;
+            } else {
+                document.documentElement.style.setProperty("--bg", "#fff");
+                document.documentElement.style.setProperty("--text", "#111");
+                isDark = false;
+            }
+        });
+
+    </script>
+</body>
+
+</html>
