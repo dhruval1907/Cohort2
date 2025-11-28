@@ -26,23 +26,23 @@
     <script>
         let p = document.querySelector("p")
         let text = p.innerHTML
-        let char = "ABCDEFGHIJKLMNOPQRTUVWXabcdefghijklmnopqrstuvwx"
-
+        let char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
         let count = 0
-        function all() {
-            let val = text.split("").map(function (elem,indx) {
-                if(indx<count){
+        function abcd() {
+            let str = text.split("").map(function (elem, indx) {
+                if (indx < count) {
                     return elem
                 }
                 return char.split("")[Math.floor(Math.random() * 52)]
             }).join("")
-
-            p.innerHTML = val
-            count+=0.50
+            p.innerText = str
+            count += 0.5
         }
-        // all()
-        setInterval(all,30)
+
+        setInterval(abcd, 30)
+
+
     </script>
 
 </body>
