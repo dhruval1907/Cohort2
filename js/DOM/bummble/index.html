@@ -28,20 +28,21 @@
         var h1 = document.querySelector("h1")
         var h3 = document.querySelector("h3")
         var btn = document.querySelector("button")
-
+        var flag= 0
         btn.addEventListener("click", function () {
-            if (btn.innerHTML === "add friend") {
-                h3.innerHTML = "Friend"
-                // console.log("click");
-                
+            if (flag === 0) {
+                h3.innerHTML = "Friend"                
                 btn.style.color = "black"
                 btn.style.backgroundColor = "aqua"
                 btn.style.fontWeight = "700"
                 btn.innerHTML = "remove friend"
+                flag = 1
             }
             else{
                 h3.innerHTML = "Stranger"
                 btn.style.backgroundColor = "red"
+                flag = 0
+                btn.innerHTML = "add friend"
                 btn.style.color = "white"
             }
 
