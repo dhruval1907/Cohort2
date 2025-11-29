@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        :root {
+            --x: 200px;
+            --y: 00px;
+        }
 
+        main {
+            height: 100vh;
+            width: 100vw;
+            background: radial-gradient(150px at var(--x) var(--y), #ffffff00, #111111);
+
+        }
+
+        body {
+            background: url(https://images.unsplash.com/photo-1764071733622-8ffa53005a31?q=80&w=1533&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body style="height: 100%;width: 100%;">
+
 
     <main>
-        
+
     </main>
 
+
+    <script>
+        window.addEventListener("mousemove", (e) => {
+            // console.log("moving");
+
+            document.body.style.setProperty("--x", e.clientX + "px")
+            document.body.style.setProperty("--y", e.clientY + "px")
+
+        })
+    </script>
 </body>
+
 </html>

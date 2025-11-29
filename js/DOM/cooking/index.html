@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+
+    <main class="flex-col w-full gap-4  h-screen bg-black text-white font-[monospace] flex items-center justify-center">
+        <p class="text-2xl">dark mode is on</p>
+        <button class="h-[1.5rem] w-[4rem] bg-white rounded-xl ">
+            <div class="inner h-[100%] w-[40%] bg-green-500 rounded-full">
+            </div>
+        </button>
+    </main>
+
+    <script>
+        var main = document.querySelector("main")
+        var para = document.querySelector("p")
+        var btn = document.querySelector("button")
+        var inner = document.querySelector(".inner")
+
+        btn.addEventListener("click", function () {
+            // console.log("click");
+            if (main.style.backgroundColor === "black") {
+                para.innerHTML = "light mode is on"
+                para.style.color = "black"
+                main.style.backgroundColor = "white"
+                inner.style.width = 100 + "%"
+            }
+            else{
+                para.innerHTML = "black mode is on"
+                para.style.color = "white"
+                main.style.backgroundColor = "black"
+                inner.style.width = 40 + "%"
+            }
+
+        })
+    </script>
+
+</body>
+
+</html>
