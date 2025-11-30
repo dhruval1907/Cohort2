@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+    <style>
+        img {
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all ease 0.2s;
+        }
+
+        h1 {
+            mix-blend-mode: difference;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="h-screen w-full bg-black">
+        <div class="elem1 h-[20%] w-full border-white border-b-1 flex items-center justify-start">
+            <h1 class="text-8xl text-white font-bold z-[3]">Opponheimer</h1>
+            <img src="https://images.unsplash.com/photo-1763641683842-3b4f09950d67?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dz"
+                alt="" class="object-cover h-[200px] w-[200px] rounded-full absolute">
+        </div>
+        <div class="elem2 h-[20%] w-full border-white border-b-1 flex items-center justify-start">
+            <h1 class="text-8xl text-white  font-bold  z-[3]">Opponheimer</h1>
+            <img src="https://images.unsplash.com/photo-1763932430044-0da2c198f4b8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="" class="object-cover h-[200px] w-[200px] rounded-full absolute">
+        </div>
+        <div class="elem3 h-[20%] w-full border-white border-b-1 flex items-center justify-start">
+            <h1 class="text-8xl text-white  font-bold  z-[3]">Opponheimer</h1>
+            <img src="https://images.unsplash.com/photo-1675981004502-cb3961785a38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="" class="object-cover h-[200px] w-[200px] rounded-full absolute">
+        </div>
+        <div class="elem4 h-[20%] w-full border-white border-b-1 flex items-center justify-start">
+            <h1 class="text-8xl text-white  font-bold  z-[3]">Opponheimer</h1>
+            <img src="https://images.unsplash.com/photo-1763411711221-40166c5e20cd?q=80&w=2093&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="" class="object-cover h-[200px] w-[200px] rounded-full absolute">
+        </div>
+        <div class="elem5 h-[20%] w-full border-white border-b-1 flex items-center justify-start">
+            <h1 class="text-8xl text-white  font-bold  z-[3]    ">Opponheimer</h1>
+            <img src="https://images.unsplash.com/photo-1763689389824-dd2cea2e5772?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="" class="object-cover h-[200px] w-[200px] rounded-full absolute  ">
+        </div>
+    </main>
+
+
+
+    <script>
+        var elem1 = document.querySelector(".elem1")
+        var elem2 = document.querySelector(".elem2")
+        var elem3 = document.querySelector(".elem3")
+        var elem4 = document.querySelector(".elem4")
+        var elem5 = document.querySelector(".elem5")
+        var elem1img = document.querySelector(".elem1 img")
+        var elem2img = document.querySelector(".elem2 img")
+        var elem3img = document.querySelector(".elem3 img")
+        var elem4img = document.querySelector(".elem4 img")
+        var elem5img = document.querySelector(".elem5 img")
+
+        function cheetah() {
+
+            elem1.addEventListener("mousemove", function (dets) {
+                // console.log(dets);
+
+                elem1img.style.left = dets.x + "px"
+                elem1img.style.top = dets.y + "px"
+                elem1img.style.opacity = "1"
+
+            })
+            elem1.addEventListener("mouseleave", function (dets) {
+
+                elem1img.style.opacity = "0"
+
+            })
+            elem2.addEventListener("mousemove", function (dets) {
+                elem2img.style.left = dets.x + "px"
+                elem2img.style.top = dets.y + "px"
+                elem2img.style.opacity = "1"
+
+            })
+            elem2.addEventListener("mouseleave", function (dets) {
+                elem2img.style.opacity = "0"
+
+            })
+            elem3.addEventListener("mousemove", function (dets) {
+                elem3img.style.left = dets.x + "px"
+                elem3img.style.top = dets.y + "px"
+                elem3img.style.opacity = "1"
+
+            })
+            elem3.addEventListener("mouseleave", function (dets) {
+                elem3img.style.opacity = "0"
+
+            })
+            elem4.addEventListener("mousemove", function (dets) {
+                elem4img.style.left = dets.x + "px"
+                elem4img.style.top = dets.y + "px"
+                elem4img.style.opacity = "1"
+
+            })
+            elem4.addEventListener("mouseleave", function (dets) {
+                elem4img.style.opacity = "0"
+
+            })
+            elem5.addEventListener("mousemove", function (dets) {
+                elem5img.style.left = dets.x + "px"
+                elem5img.style.top = dets.y + "px"
+                elem5img.style.opacity = "1"
+
+            })
+            elem5.addEventListener("mouseleave", function (dets) {
+                elem5img.style.opacity = "0"
+
+            })
+
+        }
+
+
+
+        cheetah()
+
+        
+
+    </script>
+</body>
+
+</html>
