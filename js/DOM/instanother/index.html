@@ -32,7 +32,8 @@
 <body>
 
     <main class="h-screen w-full  flex items-center justify-center ">
-        <div class="card h-[70%] w-[500px] bg-white rounded-xl">
+        <div class="card h-[70%] w-[500px] bg-white rounded-xl relative">
+            <div class="full-screen w-full h-full bg-red-300 absolute hidden    "></div>
             <div class="stories w-full h-[130px] border-black border-b-1  p-5 ">
 
             </div>
@@ -85,16 +86,25 @@
         ];
 
         var story = document.querySelector(".stories")
+        var full = document.querySelector(".full-screen")
             var clutter = ""
-            stories.forEach(function(elem){
+            stories.forEach(function(elem,indx){
                 clutter += ` <div class="story h-[100px] w-[100px] border-red border-2 rounded-full">
-                    <img src="${elem.dp}"
+                    <img id=${indx}  src="${elem.dp}"
                         alt="" class="h-[100%] w-[100%] object-cover rounded-full">
                 </div>`
             })
 
-            story.innerHTML = clutter
+             story.innerHTML = clutter
             
+             story.addEventListener("click",function(dets){
+                // console.log();
+
+                // full.innerHTML = stories[dets.target.id].story
+                full.style.display = "block"
+                full.style.backgroundImage = `${stories[dets.target.id].story}`
+
+             })
     </script>
 </body>
 
