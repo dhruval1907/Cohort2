@@ -103,7 +103,10 @@
                 // full.innerHTML = stories[dets.target.id].story
                 full.style.display = "block"
                 full.style.backgroundImage = `url(${stories[dets.target.id].story})`
-
+                
+                setTimeout(function(){
+                    full.style.display = "none"
+                },3000)
              })
     </script>
 </body>
