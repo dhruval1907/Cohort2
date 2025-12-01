@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        main{
+            height: 100vh;
+            width: 100%;
+            background: conic-gradient(black,rgb(47, 131, 118),transparent,black);
+        }
+    </style>
+</head>
+<body>
+    
+
+    <main class="flex items-center justify-center">
+        <h1 class="text-[300px] text-black font-semibold"></h1>
+    </main>
+
+    <script>
+        var h1 = document.querySelector("h1")
+
+        document.addEventListener("keydown",function(dets){
+            // console.log(dets);
+            if(dets.key === " "){
+                h1.innerHTML = "spc"
+            }
+            else{
+                h1.innerHTML = dets.key
+            }
+        })
+
+    </script>
+</body>
+</html>
