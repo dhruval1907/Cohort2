@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .li{
+            text-decoration: line-through;
+            transition: all ease 3s;
+
+        }
+        .ji{
+            text-decoration: none;
+            transition: all ease 3s;
+        }
+        </style>
+</head>
+
+<body>
+    <main class="h-screen w-full bg-black p-3">
+        <ul class="text-white font-[monospace] text-5xl  ">
+            <li>apple</li>
+            <li>banana</li>
+            <li>cherry</li>
+            <li>limka</li>
+            <li>cocacola</li>
+        </ul>
+    </main>
+    
+    <script>
+        var ul = document.querySelector("ul");
+        
+        ul.addEventListener("mouseover",function(dets){
+            dets.target.classList.toggle("li")
+        })
+        ul.addEventListener("mouseleave",function(dets){
+            dets.target.classList.toggle("li")
+        })
+    </script>
+
+</body>
+
+</html>
