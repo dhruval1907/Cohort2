@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        input{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <main class="h-screen w-full bg-black flex items-center justify-center">
+        <input type="file" name="" id="fileimp" >
+        <button class="h-15 w-35 bg-sky-200 rounded-xl border-none text-xl font-bold">
+            upload file
+        </button>
+    </main>
+
+
+    <script>
+        var inp = document.querySelector("#fileimp")
+        var btn = document.querySelector("button")
+
+        btn.addEventListener("click",function(){
+            inp.click()
+        })
+        btn.addEventListener("change",function(dets){
+            console.log(dets);
+        })
+
+    </script>
+</body>
+</html>
