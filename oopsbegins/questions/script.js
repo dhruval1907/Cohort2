@@ -164,4 +164,46 @@
 
 // let v1 = new Vehicle("toyota", "22 inch alloy")
 
-// 
+// call Method Practice
+
+// function showBrand(){
+//     console.log(this.brand);
+// }
+
+// let obj1 = {
+//     brand : "bmw"
+// }
+
+// let obj2 = {
+//     brand : "odddy"
+// }
+
+// showBrand.call(obj2)
+
+// apply Method Practice
+
+// function introduce(city,role,name){  
+//     console.log(this.name);
+//     console.log(city);
+//     console.log(role);
+// }
+
+// let obj1 ={
+//     name : "dhurval",
+// }
+
+// introduce.apply(obj1,["mumbai","developer"])
+
+//  bind Method Practice
+
+// function greet(){
+//     console.log(`hello ${this.name}`);
+// }
+
+// let name = {
+//     name  :"dhruval"
+// }
+
+// let nm =  greet.bind(name)
+
+// nm()
