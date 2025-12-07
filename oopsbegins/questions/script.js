@@ -85,13 +85,46 @@
 // objcet laptop that contains brand,method ,start method 
 
 
-let laptop = {
-    name  : "latitude",
-    brand : "dell",
-    start : function(){
-        console.log("laptop started");
-    },
-    price : function(){
-        console.log("price increase by 10%");
-    }
-}
+// let laptop = {
+//     name  : "latitude",
+//     brand : "dell",
+//     start : function(){
+//         console.log("laptop started");
+//     },
+//     price : function(){
+//         console.log("price increase by 10%");
+//     }
+
+// create a class that take name and slary 
+
+// class Employee{
+//     constructor(name,salary){   
+//         this.name = name;
+//         this.salary = salary;
+//     }
+
+//     showInfo(){
+//         console.log(`the employee name is ${this.name} and salary isb ${this.salary}`);
+        
+//     }
+// }
+
+// let e1 = new Employee("dhruval",123456)
+// let e2 = new Employee("dhruvi",1234)
+// let e3 = new Employee("dhruvil",12456)
+
+
+// create a clasas that taken accholdername and balance
+
+// class BankAccont{
+//     constructor(accHoldernm,balance){
+//         this.accHoldernm = accHoldernm;
+//         this.balance = balance;
+//     }
+//     deposit(){
+//         return this.balance + 200;
+//     }
+// }
+
+// let bank1 = new BankAccont('dhruval',1234)
+// let bank2 = new BankAccont('dhruval',1234)
