@@ -34,7 +34,7 @@
 //        return  this.price - 200;
 //     }
 
-    
+
 // }
 
 // console.log(prt.discontPrice())
@@ -105,7 +105,7 @@
 
 //     showInfo(){
 //         console.log(`the employee name is ${this.name} and salary isb ${this.salary}`);
-        
+
 //     }
 // }
 
@@ -128,3 +128,24 @@
 
 // let bank1 = new BankAccont('dhruval',1234)
 // let bank2 = new BankAccont('dhruval',1234)
+
+// create an objects and see the this value
+
+// let namedprofile = {
+//     username: "dhruval1907",
+//     printName: function () {
+//         console.log(this.username);
+
+//     }
+// }
+
+// var namedprofile1 = {
+//     username: "dhruval1907",
+//     printName: function () {
+//         console.log(this.username);
+
+//     }
+// }
+
+
+
