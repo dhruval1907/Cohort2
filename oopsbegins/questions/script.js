@@ -148,4 +148,20 @@
 // }
 
 
+// constructor function
 
+// class Vehicle {
+//     constructor(vehicle, wheel) {
+//         this.Vehicle = vehicle;
+//         this.wheel = wheel
+//     }
+
+//     Vehicle.prototype.describe = function () {
+//         console.log(this.Vehicle + "- " + this.wheel);
+//     }
+
+// }
+
+// let v1 = new Vehicle("toyota", "22 inch alloy")
+
+// 
