@@ -12,13 +12,13 @@
 
     <script>
         class User {
-            constructor(name, address, username, email, role) {
+            constructor(name, address, username, email, ) {
 
                 this.name = name;
                 this.address = address;
                 this.username = username;
                 this.email = email;
-                this.role = role;
+                this.role = "user";
             }
             write(text) {
                 let h1 = document.createElement("h1")
@@ -27,7 +27,23 @@
             }
         }
 
-        let u1 = new User("harsh", "bhopal", "harsh123", "dhruva12345", "user")
+        class admin extends User{
+            constructor(name,address,username,email,role){
+                super(name,address,username,email,role)
+                this.role = role
+            }
+
+            remove(){
+                document.querySelectorAll("h1").forEach(function(elem){
+                    elem.remove()
+                })
+            }
+        }
+
+        let u1 = new User("harsh", "bhopal", "harsh123", "dhruva12345", )
+        let u2 = new User("harshita", "bhopal", "harsh123", "dhruva12345", )
+        let u3 = new User("dhruval", "bhopal", "harsh123", "dhruva12345", )
+        let a1 = new admin("dhruval", "bhopal", "harsh123", "dhruva12345","admin" )
     </script>
 </body>
 
