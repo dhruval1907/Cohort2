@@ -71,3 +71,27 @@
 
 
 // create a function and set the this valeu usig the bind
+
+// function users(){
+//     console.log(this.name );
+// }
+
+// let obj = {
+//     name : "harsh"
+// }
+
+// users.call(obj)
+
+// objcet laptop that contains brand,method ,start method 
+
+
+let laptop = {
+    name  : "latitude",
+    brand : "dell",
+    start : function(){
+        console.log("laptop started");
+    },
+    price : function(){
+        console.log("price increase by 10%");
+    }
+}
