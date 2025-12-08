@@ -7,7 +7,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <main style="background: conic-gradient(white,black,black,white);" class="h-screen w-full  flex items-center justify-center">
+    <main style="background: conic-gradient(white,black,black,white);" class="h-screen w-full  flex items-center justify-center flex-col gap-2">
+        <h1 class="">Hover Me DADDYYYYYYYYYYYYYY!</h1>
         <div class="center w-[1000px] h-[600px] border-1 border-white rounded-2xl"></div>
     </main>    
 
@@ -28,12 +29,15 @@
                     backgroundColor : `rgb(${red},0,0)`
                 })
             }else{
-                var blue = gsap.utils.mapRange(0,centerRa.width /2,255,0,insidediv)
+                var blue = gsap.utils.mapRange(centerRa.width /2 ,centerRa.width ,0,255,insidediv)
                 gsap.to(center,{
-                    backgroundColor : `rgb(${red},0,0)`
+                    backgroundColor : `rgb(0,0,${blue})`
                 })
-                // console.log("right");
             }
+
+            center.addEventListener("mouseleave",function(){
+                center.style.backgroundColor = "white"
+            })
             
             
         })
