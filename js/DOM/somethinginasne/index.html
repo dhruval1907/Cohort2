@@ -7,12 +7,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <main class="h-screen w-full bg-black flex items-center justify-center">
-        <div class="center w-[800px] h-[600px] border-1 border-white rounded-2xl"></div>
+    <main style="background: conic-gradient(white,black,black,white);" class="h-screen w-full  flex items-center justify-center">
+        <div class="center w-[1000px] h-[600px] border-1 border-white rounded-2xl"></div>
     </main>    
 
     <script>
         var center = document.querySelector(".center")
+
+        center.addEventListener("mousemove",function(){
+            var centerRa = center.getBoundingClientRect()
+            // console.log(centerRa);
+
+            var insidediv = 
+            
+        })
     </script>
 </body>
 </html>
