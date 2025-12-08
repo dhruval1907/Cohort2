@@ -14,11 +14,19 @@
     <script>
         var center = document.querySelector(".center")
 
-        center.addEventListener("mousemove",function(){
+        center.addEventListener("mousemove",function(dets){
             var centerRa = center.getBoundingClientRect()
             // console.log(centerRa);
 
-            var insidediv = 
+            var insidediv = Math.floor( dets.clientX - centerRa.left )
+            // console.log(insidediv);
+
+            if(insidediv < centerRa.width / 2){
+                console.log("left");
+            }else{
+                console.log("right");
+            }
+            
             
         })
     </script>
