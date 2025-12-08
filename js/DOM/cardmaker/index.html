@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Cards + Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- Center Form -->
+    <div class="flex justify-center py-10">
+        <div class="w-full max-w-md bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-800">
+            <h2 class="text-2xl font-semibold text-center mb-6">Add User</h2>
+
+            <form class="space-y-4">
+                <div>
+                    <label class="block mb-1 text-sm">Name</label>
+                    <input type="text" class="w-full px-4 py-2 bg-gray-800 rounded-md focus:outline-none" />
+                </div>
+
+                <div>
+                    <label class="block mb-1 text-sm">Role</label>
+                    <input type="text" class="w-full px-4 py-2 bg-gray-800 rounded-md focus:outline-none" />
+                </div>
+
+                <div>
+                    <label class="block mb-1 text-sm">Bio</label>
+                    <textarea class="w-full px-4 py-2 bg-gray-800 rounded-md h-24 resize-none focus:outline-none"></textarea>
+                </div>
+
+                <div>
+                    <label class="block mb-1 text-sm">Photo URL</label>
+                    <input type="text" class="w-full px-4 py-2 bg-gray-800 rounded-md focus:outline-none" />
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-gray-700 hover:bg-gray-600 py-2 rounded-md font-semibold transition">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- User Cards Section -->
+    <div class="flex justify-center gap-6 pb-16">
+
+        <!-- Card 1 -->
+        <div class="w-64 bg-gray-900 p-6 rounded-xl shadow-lg text-center border border-gray-800">
+            <img src="https://i.pravatar.cc/150?img=12" class="w-24 h-24 rounded-full mx-auto mb-4">
+            <h3 class="text-xl font-semibold">John Doe</h3>
+            <p class="text-gray-400 text-sm">Frontend Developer</p>
+            <p class="text-gray-500 text-sm mt-2">Loves building beautiful UIs and learning new technologies.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="w-64 bg-gray-900 p-6 rounded-xl shadow-lg text-center border border-gray-800">
+            <img src="https://i.pravatar.cc/150?img=32" class="w-24 h-24 rounded-full mx-auto mb-4">
+            <h3 class="text-xl font-semibold">Jane Smith</h3>
+            <p class="text-gray-400 text-sm">Backend Engineer</p>
+            <p class="text-gray-500 text-sm mt-2">Enjoys solving complex problems and optimizing APIs.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="w-64 bg-gray-900 p-6 rounded-xl shadow-lg text-center border border-gray-800">
+            <img src="https://i.pravatar.cc/150?img=45" class="w-24 h-24 rounded-full mx-auto mb-4">
+            <h3 class="text-xl font-semibold">Alex Lee</h3>
+            <p class="text-gray-400 text-sm">UI/UX Designer</p>
+            <p class="text-gray-500 text-sm mt-2">Passionate about user experience and clean design.</p>
+        </div>
+
+    </div>
+
+
+    <script>
+        let form = document.querySelector("form")
+        const userManger = {
+            users : [],
+            init:function(){
+                form.addEventListener("submit",function(e){
+                    e.preventDefault()
+                })
+            },
+            addUser : function(){},
+            removeUser : function(){},
+
+            
+        }
+    </script>
+</body>
+
+</html>
