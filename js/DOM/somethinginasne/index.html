@@ -25,10 +25,14 @@
                 // console.log("left");
                 var red = gsap.utils.mapRange(0,centerRa.width /2,255,0,insidediv)
                 gsap.to(center,{
-                    
+                    backgroundColor : `rgb(${red},0,0)`
                 })
             }else{
-                console.log("right");
+                var blue = gsap.utils.mapRange(0,centerRa.width /2,255,0,insidediv)
+                gsap.to(center,{
+                    backgroundColor : `rgb(${red},0,0)`
+                })
+                // console.log("right");
             }
             
             
