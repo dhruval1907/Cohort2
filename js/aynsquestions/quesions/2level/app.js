@@ -63,24 +63,48 @@
 
 // 4 . school me jao tumhara number lao fir tumko kis subjectme kitne marks meile hai wo leke aao sirse
 
-function schoolsenumberlao(name, cb) {
-    console.log("getting the number..");
+// function schoolsenumberlao(name, cb) {
+//     console.log("getting the number..");
+//     setTimeout(() => {
+//         cb({ rollno: 15 })
+//     }, 1000);
+
+// }
+
+// function markslaosirse(rollno, cb) {
+//     console.log("getting the marks..");
+//     setTimeout(() => {
+//         cb("[phy:97,chem:18,maths:99,sanskrit:22]")
+//     }, 2000);
+// }
+
+// schoolsenumberlao("dhruval", function (data) {
+//     console.log(data);
+//     markslaosirse(data.rollno, function (marks) {
+//         console.log(marks);
+//     })
+// })
+
+
+// 5.aapka institute me jao usme course selct karo konsa course hai                                                                                                      
+
+function instistuMejao(institute, cb) {
+    console.log("getting the info...");
     setTimeout(() => {
-        cb({ rollno: 15 })
+        cb({ GRid: 10185, name: "dhruval", course: "FSD" })
     }, 1000);
-    
 }
 
-function markslaosirse(rollno, cb) {
-    console.log("getting the marks..");
+function coursemejakeMarkslao(Grid, cb) {
+    console.log("getting the marks...");
     setTimeout(() => {
-        cb("[phy:97,chem:18,maths:99,sanskrit:22]")
-    }, 2000);
+        cb("[html:88||css:89||bootstrap:90||javascript:67]")
+    }, 3000);
 }
 
-schoolsenumberlao("dhruval", function (data) {
+instistuMejao("redwhite", function (data) {
     console.log(data);
-    markslaosirse(data.rollno, function (marks) {
+    coursemejakeMarkslao(data.Grid, function (marks) {
         console.log(marks);
     })
 })
