@@ -51,12 +51,17 @@ function selctkaroKonsalenhai(specificename, cb) {
 function selectionofVehicle(modelname, cb) {
     console.log("here's ur everything about vehicle");
     setTimeout(() => {
-        cb({ model: "3model", price: 2345123 })
+        cb({ model: "3model", price: 2345123, color: "color" })
     }, 3000);
 }
 
 
-function 
+function showingcolorintoActive(color, cb) {
+    console.log("showing all the color.....");
+    setTimeout(() => {
+        cb("[black,white,grey]")
+    }, 4000);
+}
 
 vehicaleKonsalenahi("vehicles", function (allvehicle) {
     console.log(allvehicle);
@@ -66,6 +71,9 @@ vehicaleKonsalenahi("vehicles", function (allvehicle) {
             console.log(mmodelinfo);
             selectionofVehicle(mmodelinfo.g3model, function (alllinfo) {
                 console.log(alllinfo);
+                showingcolorintoActive(alllinfo.color, function (allcolors) {
+                    console.log(allcolors);
+                })
             })
         })
     })
