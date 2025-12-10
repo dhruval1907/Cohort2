@@ -55,10 +55,28 @@
 
 // insgramseDatalao("harsh",function(data){
 //     console.log(data);
-    
+
 //     postLao(data.uniquenumber,function(images){
 //         console.log(images);
 //     })
 // })
 
+// 4 . school me jao tumhara number lao fir tumko kis subjectme kitne marks meile hai wo leke aao sirse
 
+function schoolsenumberlao(name, cb) {
+    console.log("getting the number..");
+    setTimeout(() => {
+        cb({ rollno: 15 })
+    }, 1000);
+
+}
+
+function markslaosirse(rollno,cb){
+    cb("[phy:97],[chem:18],[maths:99],[sanskrit:22]")
+}
+
+schoolsenumberlao("dhruval", function (data) {
+    markslaosirse(data.rollno,function(marks){
+        console.log();
+    })    
+})
