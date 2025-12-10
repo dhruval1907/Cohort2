@@ -19,7 +19,18 @@ html, body {
     --bg-white-color : #f0f0f0;
 }
 
+main,section{
+    height: 100%;
+    width: 100%;
+}
+section{
+    padding: 40px 40px;
+}
 
-
+section .infos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 
 
