@@ -14,19 +14,22 @@
 
 
 function getUser(username, cb) {
-    var set = setInterval(() => {
-        console.log("fethcing the data.........");
-    }, 1000);
-    setTimeout(() => {
-        clearInterval(set)
-    }, 1200);
+    console.log("fethcing the data.........");
     setTimeout(function () {
         cb({ id: 10, name: username })
     }, 2000)
 }
 
-getUser("harsh", function (data) {
-    console.log("get the data.........");
-    console.log(data);
+function getuserPosts(id, cb) {
+    console.log("getting the user posts");
+    setTimeout(() => {
+        cb(["hello", "hyyy", "fack you"])
+    }, 2000);
+}
 
+getUser("harsh", function (data) {  
+    console.log(data);
+    getuserPosts(data.id,function(allposts){
+        console.log(data.username, allposts);
+    })
 })
