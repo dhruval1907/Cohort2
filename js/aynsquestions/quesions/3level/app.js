@@ -59,8 +59,26 @@ function selectionofVehicle(modelname, cb) {
 function showingcolorintoActive(color, cb) {
     console.log("showing all the color.....");
     setTimeout(() => {
-        cb("[black,white,grey]")
+        cb({ red: "red", black: "black", grey: "grey", blue: "blue" })
     }, 4000);
+}
+
+function choosecolorofactive(color, cb) {
+    setTimeout(() => {
+        cb(
+            console.log("grey color in not available")
+        )
+    }, 4500);
+}
+
+function chooseanothercolor(chagecolor, cb) {
+    cb(
+        console.log("black color is possible to delivered")
+    )
+}
+
+function sendingAddress(,cb){
+
 }
 
 vehicaleKonsalenahi("vehicles", function (allvehicle) {
@@ -73,6 +91,12 @@ vehicaleKonsalenahi("vehicles", function (allvehicle) {
                 console.log(alllinfo);
                 showingcolorintoActive(alllinfo.color, function (allcolors) {
                     console.log(allcolors);
+                    choosecolorofactive(allcolors.grey, function (isavlid) {
+                        console.log(isavlid);
+                        chooseanothercolor(allcolors.black, function (valid) {
+                            console.log(valid);
+                        })
+                    })
                 })
             })
         })
