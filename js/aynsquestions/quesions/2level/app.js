@@ -68,15 +68,19 @@ function schoolsenumberlao(name, cb) {
     setTimeout(() => {
         cb({ rollno: 15 })
     }, 1000);
-
+    
 }
 
-function markslaosirse(rollno,cb){
-    cb("[phy:97],[chem:18],[maths:99],[sanskrit:22]")
+function markslaosirse(rollno, cb) {
+    console.log("getting the marks..");
+    setTimeout(() => {
+        cb("[phy:97,chem:18,maths:99,sanskrit:22]")
+    }, 2000);
 }
 
 schoolsenumberlao("dhruval", function (data) {
-    markslaosirse(data.rollno,function(marks){
-        console.log();
-    })    
+    console.log(data);
+    markslaosirse(data.rollno, function (marks) {
+        console.log(marks);
+    })
 })
