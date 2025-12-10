@@ -1,6 +1,8 @@
 // 1.delay function banke uske callback me time lao ot us time settiout ko tum use karo apne settimour ke time me
 // function afterDelay(time, cb) {
 
+// const { use } = require("react");
+
 //     console.log("fetching the data...");
 //     setTimeout(() => {
 //         cb("callback executed.....")
@@ -13,23 +15,50 @@
 // })
 
 
-function getUser(username, cb) {
-    console.log("fethcing the data.........");
-    setTimeout(function () {
-        cb({ id: 10, name: username })
-    }, 2000)
-}
+// function getUser(username, cb) {
+//     console.log("fethcing the data.........");
+//     setTimeout(function () {
+//         cb({ id: 10, name: username })
+//     }, 2000)
+// }
 
-function getuserPosts(id, cb) {
-    console.log("getting the user posts");
-    setTimeout(() => {
-        cb(["hello", "hyyy", "fack you"])
-    }, 2000);
-}
+// function getuserPosts(id, cb) {
+//     console.log("getting the user posts");
+//     setTimeout(() => {
+//         cb(["hello", "hyyy", "fack you"])
+//     }, 2000);
+// }
 
-getUser("harsh", function (data) {  
-    console.log(data);
-    getuserPosts(data.id,function(allposts){
-        console.log(data.username, allposts);
-    })
-})
+// getUser("harsh", function (data) {  
+//     console.log(data);
+//     getuserPosts(data.id,function(allposts){
+//         console.log(data.username, allposts);
+//     })
+// })
+
+
+// insta parse uniqe number la fir use uniquenum se tum jao meta parent company me jake tume aapni sari post leke aao
+
+// function insgramseDatalao(username,cb){
+//     console.log("fetchig the data........");
+//     setTimeout(() => {
+//         cb({uniquenumber:10,name:username})
+//     }, 2000);
+// }
+
+// function postLao(uniquenumber,cb){
+//     console.log("getting all the posts........");
+//     setTimeout(() => {
+//         cb(["img1","img2"])
+//     }, 3000);
+// }
+
+// insgramseDatalao("harsh",function(data){
+//     console.log(data);
+    
+//     postLao(data.uniquenumber,function(images){
+//         console.log(images);
+//     })
+// })
+
+
