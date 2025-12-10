@@ -11,3 +11,22 @@
 // afterDelay(2000, function (data) {
 //     console.log(data);
 // })
+
+
+function getUser(username, cb) {
+    var set = setInterval(() => {
+        console.log("fethcing the data.........");
+    }, 1000);
+    setTimeout(() => {
+        clearInterval(set)
+    }, 1200);
+    setTimeout(function () {
+        cb({ id: 10, name: username })
+    }, 2000)
+}
+
+getUser("harsh", function (data) {
+    console.log("get the data.........");
+    console.log(data);
+
+})
