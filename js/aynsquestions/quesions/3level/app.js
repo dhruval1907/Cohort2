@@ -77,8 +77,8 @@ function chooseanothercolor(chagecolor, cb) {
     )
 }
 
-function sendingAddress(,cb){
-
+function sendingAddress(){
+    
 }
 
 vehicaleKonsalenahi("vehicles", function (allvehicle) {
