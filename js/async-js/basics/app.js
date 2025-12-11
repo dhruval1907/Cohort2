@@ -100,3 +100,7 @@ userid()
     .then(function (Setting) {
         console.log(Setting);
     })
+
+// Build a chain of Promises where each step adds a number to the previous result (ex: 5 → +3 → +7 → +2). What should the final structure look like?
+
+
