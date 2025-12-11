@@ -67,12 +67,30 @@
 // Design the Promise chain logic for this.
 
 function A(id){
-    return new Promise((resolve,reject)=>{
-        resolve(`got the id here it is ${id}`)
-        reject(`got the id here it is ${id}`)
+    return new Promise((resolve)=>{
+        setTimeout(() => {
+            resolve(1212)
+        }, 2000);
     })
 }
 
-A(1212).then(function(){
-    
+function B(){
+    return new Promise((resolve)=>{
+        setTimeout(() => {
+            resolve({id:id,Username:"legend"})
+        }, 1000);
+    })
+}
+
+function C(){
+
+}
+
+A()
+.then(function(result){
+    return A(id)
 })
+//     .then(function{userinfo}{
+//         console.log(userinfo);
+//     })
+// })
