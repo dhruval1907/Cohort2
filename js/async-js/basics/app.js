@@ -66,20 +66,37 @@
 // Step C takes user data and returns user settings
 // Design the Promise chain logic for this.
 
-function userid(){
-    return new Promise((resolve)=>{
+function userid() {
+    return new Promise((resolve) => {
         setTimeout(() => {
             resolve(1212)
         }, 800);
     })
 }
 
-function userdata(id){
-    return new Promise((resolve)=>{
+function userdata(id) {
+    return new Promise((resolve) => {
         setTimeout(() => {
-            resolve({id:id,name:"harsh"})
+            resolve({ id: id, name: "harsh" })
         }, 1000);
     })
 }
 
-function userSetting
+function userSetting() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({ theme: "dark", language: "english" })
+        }, 1200);
+    })
+}
+
+userid()
+    .then(function (id) {
+        return userdata(id)
+    })
+    .then(function (userdata) {
+        return userSetting(userdata)
+    })
+    .then(function (Setting) {
+        console.log(Setting);
+    })
