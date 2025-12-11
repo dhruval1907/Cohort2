@@ -90,6 +90,15 @@ function getUserSettings(userdata){
     })
 }
  getUserId()
- .then(function(result){
-    return getUserData(id);
+ .then(function(id){
+    return getUserData(id);    
  })
+ .then(function(userdata){
+    return getUserSettings(userdata)
+})
+.then(function(setting){
+    console.log(setting);
+ })
+.then(function(setting){
+    log
+})
