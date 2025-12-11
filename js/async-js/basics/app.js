@@ -66,60 +66,86 @@
 // Step C takes user data and returns user settings
 // Design the Promise chain logic for this.
 
-function userid() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(1212)
-        }, 800);
+// function userid() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve(1212)
+//         }, 800);
+//     })
+// }
+
+// function userdata(id) {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve({ id: id, name: "harsh" })
+//         }, 1000);
+//     })
+// }
+
+// function userSetting() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve({ theme: "dark", language: "english" })
+//         }, 1200);
+//     })
+// }
+
+// userid()
+//     .then(function (id) {
+//         return userdata(id)
+//     })
+//     .then(function (userdata) {
+//         return userSetting(userdata)
+//     })
+//     .then(function (Setting) {
+//         console.log(Setting);
+//     })
+
+// Build a chain of Promises where each step adds a number to the previous result (ex: 5 → +3 → +7 → +2). What should the final structure look like?
+
+function addition(start){
+    return new Promise((resolve)=>{
+        resolve(start)
     })
 }
 
-function userdata(id) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve({ id: id, name: "harsh" })
-        }, 1000);
+
+addition(5)
+.then(function(result){
+    console.log("start : ",result);
+    return result + 3;
+}).then(function(result){
+    console.log("after add +3 : ",result);
+    return result + 7
+}).then(function(result){
+    console.log("after add +7 : ",result);
+})
+.catch(function(errr){
+    console.log("something went wrong!!!!");    
+})
+
+
+// Design a Promise chain where the second Promise depends on the first, but the third Promise does not depend on the second. How will you structure this?
+
+function userid(){
+    return new Promise((resolve)=>{
+        resolve(1212)
     })
 }
 
-function userSetting() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve({ theme: "dark", language: "english" })
-        }, 1200);
+function userdata(id){
+    return new Promise((resolve)=>{
+        resolve({id:id,name:"legend"})
+    })
+}
+
+function gender(){
+    return new Promise((resolve)=>{
+        resolve({gender:"male",gender:"female"})
     })
 }
 
 userid()
-    .then(function (id) {
-        return userdata(id)
-    })
-    .then(function (userdata) {
-        return userSetting(userdata)
-    })
-    .then(function (Setting) {
-        console.log(Setting);
-    })
-
-// Build a chain of Promises where each step adds a number to the previous result (ex: 5 → +3 → +7 → +2). What should the final structure look like?
-
-
-function addNum1(){
-    return new Promise((resolve)=>{
-        setTimeout(() => {
-            let num1 = 10;
-        }, 100);
-    })
-}
-function addNum2(){
-    return new Promise((resolve)=>{
-        setTimeout(() => {
-            let num2 = 20;
-        }, 100);
-    })
-}
-
-addNum1()
-.then(function(num1){
-    return addNum2(num2)
+.then(function(id){
+    return 
 })
