@@ -104,3 +104,22 @@ userid()
 // Build a chain of Promises where each step adds a number to the previous result (ex: 5 → +3 → +7 → +2). What should the final structure look like?
 
 
+function addNum1(){
+    return new Promise((resolve)=>{
+        setTimeout(() => {
+            let num1 = 10;
+        }, 100);
+    })
+}
+function addNum2(){
+    return new Promise((resolve)=>{
+        setTimeout(() => {
+            let num2 = 20;
+        }, 100);
+    })
+}
+
+addNum1()
+.then(function(num1){
+    return addNum2(num2)
+})
