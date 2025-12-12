@@ -236,4 +236,4 @@
 // .catch(function(){
 //     console.log("kuch to gadbad hai daya!!");
     
-// })
+// }) 
