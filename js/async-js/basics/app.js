@@ -187,22 +187,53 @@
 
 // You have to design a Promise that fails if the input is not a number. How will you handle success and failure?
 
-function checkNumber(){
-    return new Promise((resolve,reject)=>{
-        let value = 1234
-        if(typeof value === "number"){
-            resolve("input me number aa gya")
-        }
-        else{
-            reject("input me kuch error hai !!")
-        }
+// function checkNumber(){
+//     return new Promise((resolve,reject)=>{
+//         let value = 1234
+//         if(typeof value === "number"){
+//             resolve("input me number aa gya")
+//         }
+//         else{
+//             reject("input me kuch error hai !!")
+//         }
+//     })
+// }
+
+// checkNumber()
+// .then(function(result){
+//     console.log(result);
+// })
+// .catch(function(result){
+//     console.log(result);
+// })
+
+// Build a chain where:
+// Step 1 resolves
+// Step 2 rejects
+// After catch, the chain continues to Step 3
+// What should the overall flow be?
+
+function primNumber(){
+    return new Promise((resolve)=>{
+        resolve("resolve hua")
+    })   
+}
+
+function notaPrimenumber(){
+    return new Promise((reject)=>{
+        reject("reject hua")
     })
 }
 
-checkNumber()
+primNumber()
 .then(function(result){
     console.log(result);
+    return notaPrimenumber()
 })
-.catch(function(result){
-    console.log(result);
+.then(function(reject){
+    console.log(reject); 
+})
+.catch(function(){
+    console.log("kuch to gadbad hai daya!!");
+    
 })
