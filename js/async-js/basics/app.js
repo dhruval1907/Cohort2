@@ -159,28 +159,47 @@
 
 // Create a situation where step 1 succeeds, step 2 fails, and step 3 should not run. How will you handle the error properly?
 
-function success() {
-    return new Promise((resolve) => {
-        resolve("succesfull ho gya hai bhai!!")
-    })
-}
+// function success() {
+//     return new Promise((resolve) => {
+//         resolve("succesfull ho gya hai bhai!!")
+//     })
+// }
 
-function reject() {
-    return new Promise((reject) => {
-        reject("reject ho gya hai bhai!!!")
-    })
-}
+// function reject() {
+//     return new Promise((reject) => {
+//         reject("reject ho gya hai bhai!!!")
+//     })
+// }
 
 
-success()
-    .then(function (result) {
-        console.log(result);
-        return reject()
-    })
-    .then(function (result) {
-        console.log(result);
-    })
-    .catch(function(error){
-        console.log("error hai bhai kuch !!",error);
+// success()
+//     .then(function (result) {
+//         console.log(result);
+//         return reject()
+//     })
+//     .then(function (result) {
+//         console.log(result);
+//     })
+//     .catch(function(error){
+//         console.log("error hai bhai kuch !!",error);
         
+//     })
+
+// You have to design a Promise that fails if the input is not a number. How will you handle success and failure?
+
+function checkNumber(){
+    return new Promise((resolve,reject)=>{
+        if(value === "number"){
+            resolve("input me number aa gya")
+        }
+        else{
+            reject("input me kuch error hai !!")
+        }
     })
+}
+
+checkNumber()
+.then(function(result){
+    console.log(result);
+})
+.catch
