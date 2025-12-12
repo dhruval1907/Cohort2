@@ -103,49 +103,56 @@
 
 // Build a chain of Promises where each step adds a number to the previous result (ex: 5 → +3 → +7 → +2). What should the final structure look like?
 
-function addition(start){
-    return new Promise((resolve)=>{
-        resolve(start)
-    })
-}
+// function addition(start){
+//     return new Promise((resolve)=>{
+//         resolve(start)
+//     })
+// }
 
 
-addition(5)
-.then(function(result){
-    console.log("start : ",result);
-    return result + 3;
-}).then(function(result){
-    console.log("after add +3 : ",result);
-    return result + 7
-}).then(function(result){
-    console.log("after add +7 : ",result);
-})
-.catch(function(errr){
-    console.log("something went wrong!!!!");    
-})
+// addition(5)
+// .then(function(result){
+//     console.log("start : ",result);
+//     return result + 3;
+// }).then(function(result){
+//     console.log("after add +3 : ",result);
+//     return result + 7
+// }).then(function(result){
+//     console.log("after add +7 : ",result);
+// })
+// .catch(function(errr){
+//     console.log("something went wrong!!!!");    
+// })
 
 
 // Design a Promise chain where the second Promise depends on the first, but the third Promise does not depend on the second. How will you structure this?
 
-function userid(){
-    return new Promise((resolve)=>{
-        resolve(1212)
-    })
-}
+// function userid() {
+//     return new Promise((resolve) => {
+//         resolve(1212)
+//     })
+// }
 
-function userdata(id){
-    return new Promise((resolve)=>{
-        resolve({id:id,name:"legend"})
-    })
-}
+// function userdata(id) {
+//     return new Promise((resolve) => {
+//         resolve({ id: id, name: "legend" })
+//     })
+// }
 
-function gender(){
-    return new Promise((resolve)=>{
-        resolve({gender:"male",gender:"female"})
-    })
-}
+// function gender() {
+//     return new Promise((resolve) => {
+//         resolve({ gender: "male", gender: "female" })
+//     })
+// }
 
-userid()
-.then(function(id){
-    return 
-})
+// userid()
+//     .then(function (id) {
+//         console.log("user id is : ", id);
+//         return userdata(id)
+//     })
+//     .then(function (userdata) {
+//         console.log("userdata is  : ", userdata)
+//     })
+//     .then(function (gender) {
+//         console.log("gender :", gender);
+//     })
