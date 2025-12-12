@@ -213,27 +213,27 @@
 // After catch, the chain continues to Step 3
 // What should the overall flow be?
 
-function primNumber(){
-    return new Promise((resolve)=>{
-        resolve("resolve hua")
-    })   
-}
+// function primNumber(){
+//     return new Promise((resolve)=>{
+//         resolve("resolve hua")
+//     })   
+// }
 
-function notaPrimenumber(){
-    return new Promise((reject)=>{
-        reject("reject hua")
-    })
-}
+// function notaPrimenumber(){
+//     return new Promise((reject)=>{
+//         reject("reject hua")
+//     })
+// }
 
-primNumber()
-.then(function(result){
-    console.log(result);
-    return notaPrimenumber()
-})
-.then(function(reject){
-    console.log(reject); 
-})
-.catch(function(){
-    console.log("kuch to gadbad hai daya!!");
+// primNumber()
+// .then(function(result){
+//     console.log(result);
+//     return notaPrimenumber()
+// })
+// .then(function(reject){
+//     console.log(reject); 
+// })
+// .catch(function(){
+//     console.log("kuch to gadbad hai daya!!");
     
-})
+// })
