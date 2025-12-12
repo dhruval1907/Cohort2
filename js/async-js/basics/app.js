@@ -189,7 +189,8 @@
 
 function checkNumber(){
     return new Promise((resolve,reject)=>{
-        if(value === "number"){
+        let value = 1234
+        if(typeof value === "number"){
             resolve("input me number aa gya")
         }
         else{
@@ -202,4 +203,6 @@ checkNumber()
 .then(function(result){
     console.log(result);
 })
-.catch
+.catch(function(result){
+    console.log(result);
+})
