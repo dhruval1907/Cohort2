@@ -1,7 +1,3 @@
-const username = "dhara"
+const arr = [10,11,12,13,14]
 
-export const a = 12;
-export const b = 12;
-
-
-export default username;
+export default arr
