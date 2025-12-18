@@ -1,4 +1,9 @@
-import a from './app.js'
+import username from './app.js'
 
-console.log(a);
-    
+// import {a,b} from './app.js'
+// main.js
+import { a, b } from './app.js';
+
+
+// export default 
+console.log(username);
