@@ -1,72 +1,69 @@
-var center = document.querySelector(".center")
+var center = document.querySelector(".center");
 
 const images = [
-    image1 = `./le.jpg`,
-    image2 = `./something.png`
-]
-
-const btn = document.querySelector("#throttle");
+  "./le.jpg",
+  "./something.png",
+  "./image1.jpeg",
+  "./image2.jpeg",
+  "./image3.jpeg"
+];
 
 const throttleFunction = (func, delay) => {
-    let prev = 0;
+  let prev = 0;
 
-    return (...args) => {
-        let now = new Date().getTime();
+  return (...args) => {
+    let now = new Date().getTime();
 
-        if (now - prev > delay) {
-            prev = now;
-            return func(...args);
-        }
-    };
+    if (now - prev > delay) {
+      prev = now;
+      func(...args);
+    }
+  };
 };
 
 center.addEventListener(
-    "mousemove",
-    throttleFunction((dets) => {
-        var div = document.createElement("div")
-        div.style.height = 270 +"px"
-        div.style.width = 200 +"px"
-        // div.style.backgroundColor = "red"
-        div.style.position = "absolute"
-        div.style.zIndex = 2
-        div.style.left = dets.clientX + "px"
-        div.style.top = dets.clientY + "px"
-        div.style.overflow = "hidden"
-        center.style.overflow = "hidden"
-        console.log(div);
-        var imgdiv= document.createElement("img")
-        div.classList.add("img-box")
+  "mousemove",
+  throttleFunction((e) => {
+    const div = document.createElement("div");
+    div.classList.add("img-box");
 
-        // imgdiv.setAttribute("src","https://images.unsplash.com/photo-1764377723685-31e60ed8e550?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-        let randomeimage = Math.floor(Math.random()*images.length)
-        imgdiv.src = randomeimage;
-        div.appendChild(imgdiv)
-        document.body.appendChild(div)
+    div.style.width = "200px";
+    div.style.height = "270px";
+    div.style.position = "absolute";
+    div.style.left = e.clientX + "px";
+    div.style.top = e.clientY + "px";
+    div.style.transform = "translate(-50%, -50%)";
+    div.style.overflow = "hidden";
+    div.style.zIndex = "10";
 
-        gsap.to(imgdiv,{
-            y:"0",
-            ease:Power1,
-            duration:.6
-        })
-        gsap.to(imgdiv,{
-            y:"100%",
-            ease:Power2,
-            delay:.6,
-        })
+    const img = document.createElement("img");
+    img.style.width = "100%";
+    img.style.height = "100%";
+    img.style.objectFit = "cover";
+    img.style.transform = "translateY(100%)";
 
-        setTimeout(() => {
-            div.remove()
-        }, 2000);
-        
-    }, 500)
+    const randomIndex = Math.floor(Math.random() * images.length);
+    img.src = images[randomIndex];
 
+    div.appendChild(img);
+    document.body.appendChild(div);
 
+    gsap.to(img, {
+      y: "0%",
+      duration: 0.6,
+      ease: "power2.out"
+    });
+
+    gsap.to(img, {
+      y: "100%",
+      duration: 0.6,
+      delay: 0.6,
+      ease: "power2.in"
+    });
+
+    setTimeout(() => {
+      div.remove();
+    }, 1400);
+
+  }, 500)
 );
-
-
-
-center.addEventListener("mousemove",function(dets){
-    
-})
-
-
