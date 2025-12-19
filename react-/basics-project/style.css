@@ -53,3 +53,9 @@ html, body {
   font-size: 20px;
   color: white;
 }
+
+#parts{
+  height: 89.5vh;
+  width: 100vw;
+  background-color: red;
+}
