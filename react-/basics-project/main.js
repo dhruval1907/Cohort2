@@ -1,5 +1,5 @@
  const main =()=>{
-    return React.createElement("div",{id:"main"}, "MAIN COMPONENT RENDERED")
+    return React.createElement("div",{id:"main"}, "")
 }
 
 export default main
