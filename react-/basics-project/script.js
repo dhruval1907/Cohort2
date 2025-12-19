@@ -1,7 +1,8 @@
-import React from "react";
-import abc from "./nav.js";
+import h1 from "./nav.js"
 
-// console.log(abc());
+// console.log(h1);
+
 
 var main = ReactDOM.createRoot(document.querySelector("#container"))
-main.render(abc())
+main.render(h1())
+

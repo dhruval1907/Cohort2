@@ -1,6 +1,5 @@
-function abc(){
-    console.log("Hey welcome to the js ")
-    return "me badiya huu "
+const h1 =()=>{
+    React.createElement("h1",{id:red},"kaise ho bhai aapp")
 }
 
-export default abc;
+export default h1 
