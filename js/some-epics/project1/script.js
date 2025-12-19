@@ -5,7 +5,8 @@ const images = [
   "./something.png",
   "./image1.jpeg",
   "./image2.jpeg",
-  "./image3.jpeg"
+  "./image3.jpeg",
+  "./image4.jpeg"
 ];
 
 const throttleFunction = (func, delay) => {
