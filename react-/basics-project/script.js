@@ -1,5 +1,5 @@
-var box = React.createElement("h1",null,"kaise ho aap sb ")
+var h1 = React.createElement("h1",null,"kaise ho aap sb")
 
-var main = React.createRoot(document.querySelector("#container"))
+var root = ReactDOM.createRoot(document.querySelector("#container"))
 
-main.render(box)
+root.render(h1)
