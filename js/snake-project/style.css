@@ -25,6 +25,9 @@ main,section{
 }
 section{
     padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 section .infos{
@@ -33,4 +36,21 @@ section .infos{
     justify-content: space-around;
 }
 
+section .info{
+  padding: 20px;
+  border:  1px solid #333333;
+  border-radius: 10px;
+}
 
+.board{
+  border:  1px solid #333333;
+  flex-grow: 1;
+  
+}
+
+
+.block{
+  width:30px ;
+  height: 30px;
+  border: 1px solid #333333;
+}
