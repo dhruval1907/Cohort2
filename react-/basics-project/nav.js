@@ -1,5 +1,10 @@
-var h1 = React.createElement("h1",null,"kaise ho bhai")
+function h1() {
 
-var root = ReactDOM.createRoot(document.querySelector("#container"))
+    return  React.createElement(
+        "h1",
+        null,
+        "kaise ho bhai"
+    );
 
-root.render(h1)
+}
+export default h1
