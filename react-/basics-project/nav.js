@@ -1,5 +1,5 @@
-const h1 =()=>{
-    React.createElement("h1",{id:red},"kaise ho bhai aapp")
+export const h1 =()=>{
+    React.createElement("h1",null,"kaise ho bhai aapp")
 }
 
-export default h1 
+// export default h1 
