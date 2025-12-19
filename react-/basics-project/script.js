@@ -1,7 +1,9 @@
-import {h1} from "./nav.js"
+// main ko connect kiya
+import  main  from "./main.js"
 
-console.log(h1);
+var box = ReactDOM.createRoot(document.querySelector("#container"))
 
-var main = ReactDOM.createRoot(document.querySelector("#container"))
-main.render(h1())
+box.render(main())
+
+
 
