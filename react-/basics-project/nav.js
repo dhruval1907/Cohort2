@@ -1,3 +1,5 @@
-var div = React.createElement("div",{id:nav})
+var h1 = React.createElement("h1",null,"kaise ho bhai")
 
-ReactDOM.createRoot()
+var root = ReactDOM.createRoot(document.querySelector("#container"))
+
+root.render(h1)
