@@ -19,3 +19,20 @@ html, body {
   width: 100%;
   background-color: red;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  width: 50%;
+}
+
+.hero-image img {
+  width: 100%;
+}
