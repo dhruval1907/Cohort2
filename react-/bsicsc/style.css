@@ -18,7 +18,7 @@ html, body {
         background-color: red;
 }
 
-button{
+#button{
     padding: 20px 60px;
     border: 1px solid black;
     border-radius: 10px;
