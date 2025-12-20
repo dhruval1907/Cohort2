@@ -1,7 +1,7 @@
 const nav = () => {
     return React.createElement("nav", { id: "nav" }, [React.createElement("div", { key: 1 }, "logo"), React.createElement("ul"), { key: 2 },
     [
-        React.createElement("li", { key: "a" }, "ABOUT US"),
+        React.createElement("li", { key: 3 }, "ABOUT US"),
         React.createElement("li", { key: "p" }, "PORTFOLIO"),
         React.createElement("li", { key: "s" }, "ABOUT US"),
         React.createElement("li", { key: "b" }, "BLOG")

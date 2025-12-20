@@ -1,6 +1,5 @@
 import herotext from "./herotext.js"
 import heroimage from "./heroimage.js"
-import React from "react"
 
 const hero=()=>{
     return React.createElement("section",{className:"hero"},[
