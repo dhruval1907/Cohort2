@@ -1,5 +1,5 @@
 const button =()=>{
-    return React.createElement('button',{id:"button"},"BUTTON")
+    return React.createElement("button",null,"NAVBAR")
 }
 
 export default button;

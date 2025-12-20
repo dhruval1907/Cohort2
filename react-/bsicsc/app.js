@@ -1,9 +1,6 @@
-// import { createElement } from 'react'
-import main from './main.js'
+// import React from "react"
+import main from "./main.js"
 
-const app=()=>{
-    return React.createElement(main)
-
+const app =()=>{
+    return React.createElement(app)
 }
-
-export default app
