@@ -45,7 +45,9 @@ section .info{
 .board{
   border:  1px solid #333333;
   flex-grow: 1;
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fill,30px);
+  grid-template-rows: repeat(auto-fill,30px);
 }
 
 
