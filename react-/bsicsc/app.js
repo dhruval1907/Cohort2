@@ -2,5 +2,7 @@
 import main from "./main.js"
 
 const app =()=>{
-    return React.createElement(app)
+    return React.createElement(main)
 }
+
+export default app;
