@@ -1,5 +1,3 @@
-import array from './app.js'
+import app from "./app.js"
 
-import {a,b,c} from './app.js'
-
-console.log(array,a,b,c);
+ReactDOM.render(React.createElement(app), document.querySelector("container"))
